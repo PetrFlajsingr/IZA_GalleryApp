@@ -1,4 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AlbumEntity" representedClassName="AlbumEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="descriptionS" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="albums" inverseEntity="PhotoEntity" syncable="YES"/>
+    </entity>
+    <entity name="ItemEntity" representedClassName="ItemEntity" parentEntity="ObjectEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="photoRecords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemOnPhotoEntity" inverseName="item" inverseEntity="ItemOnPhotoEntity" syncable="YES"/>
+    </entity>
+    <entity name="ItemOnPhotoEntity" representedClassName="ItemOnPhotoEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemEntity" inverseName="photoRecords" inverseEntity="ItemEntity" syncable="YES"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="itemsOnPhoto" inverseEntity="PhotoEntity" syncable="YES"/>
+        <relationship name="position" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PositionEntity" syncable="YES"/>
+    </entity>
+    <entity name="ObjectEntity" representedClassName="ObjectEntity" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="descriptionS" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PersonEntity" representedClassName="PersonEntity" parentEntity="ObjectEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photoRecords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PersonOnPhotoEntity" inverseName="persons" inverseEntity="PersonOnPhotoEntity" syncable="YES"/>
+    </entity>
+    <entity name="PersonOnPhotoEntity" representedClassName="PersonOnPhotoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="positionX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="positionY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="persons" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonEntity" inverseName="photoRecords" inverseEntity="PersonEntity" syncable="YES"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="personsOnPhoto" inverseEntity="PhotoEntity" syncable="YES"/>
+        <relationship name="position" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PositionEntity" syncable="YES"/>
+    </entity>
+    <entity name="PhotoEntity" representedClassName="PhotoEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="creationDate" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="format" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pathToFile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="albums" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AlbumEntity" inverseName="photos" inverseEntity="AlbumEntity" syncable="YES"/>
+        <relationship name="itemsOnPhoto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemOnPhotoEntity" inverseName="photo" inverseEntity="ItemOnPhotoEntity" syncable="YES"/>
+        <relationship name="personsOnPhoto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PersonOnPhotoEntity" inverseName="photo" inverseEntity="PersonOnPhotoEntity" syncable="YES"/>
+        <relationship name="resolution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResolutionEntity" inverseName="photo" inverseEntity="ResolutionEntity" syncable="YES"/>
+    </entity>
+    <entity name="PositionEntity" representedClassName="PositionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="positionX" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="positionY" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ResolutionEntity" representedClassName="ResolutionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="resolutionX" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="resolutionY" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="resolution" inverseEntity="PhotoEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AlbumEntity" positionX="-38" positionY="126" width="128" height="105"/>
+        <element name="PhotoEntity" positionX="279" positionY="153" width="128" height="163"/>
+        <element name="PersonEntity" positionX="405" positionY="-99" width="128" height="73"/>
+        <element name="PersonOnPhotoEntity" positionX="457" positionY="27" width="128" height="118"/>
+        <element name="ItemEntity" positionX="160" positionY="-96" width="128" height="58"/>
+        <element name="ItemOnPhotoEntity" positionX="108" positionY="36" width="128" height="88"/>
+        <element name="ObjectEntity" positionX="277" positionY="-201" width="128" height="75"/>
+        <element name="ResolutionEntity" positionX="97" positionY="297" width="128" height="88"/>
+        <element name="PositionEntity" positionX="270" positionY="15" width="128" height="73"/>
+    </elements>
 </model>
