@@ -22,8 +22,6 @@ class AlbumListViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
 }
