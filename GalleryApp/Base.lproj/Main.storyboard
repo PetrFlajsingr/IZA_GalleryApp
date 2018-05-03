@@ -671,10 +671,10 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="O3v-1y-LMt"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="GalleryApp" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="GalleryApp"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -861,7 +861,7 @@
         <!--Album list-->
         <scene sceneID="AXf-GT-OC2">
             <objects>
-                <viewController title="Album list" id="Dlv-85-Cat" customClass="AlbumListViewController" customModule="GalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Album list" id="Dlv-85-Cat" customClass="AlbumListViewController" customModule="GalleryApp" sceneMemberID="viewController">
                     <view key="view" id="1M9-Eg-Zkd">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -900,14 +900,14 @@
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2M0-NG-l0S">
                                                                     <rect key="frame" x="0.0" y="0.0" width="207" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="5W7-1t-dhR">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="5W7-1t-dhR">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="h3f-rA-5kd" name="editable" keyPath="self.EDI" id="dAM-Xm-2o9"/>
                                                                         <binding destination="h3f-rA-5kd" name="value" keyPath="objectValue.title" id="GEj-py-pPY"/>
+                                                                        <binding destination="Dlv-85-Cat" name="enabled" keyPath="self.EDI" id="xVh-XG-wuv"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -937,14 +937,18 @@
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdL-49-IB6">
                                                                     <rect key="frame" x="0.0" y="0.0" width="235" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="ikE-Gt-VbX">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="ikE-Gt-VbX">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="bbL-n5-yGX" name="editable" keyPath="self.EDI" id="0Ph-uC-1e2"/>
-                                                                        <binding destination="bbL-n5-yGX" name="value" keyPath="objectValue.creationDate" id="h0n-IE-Vhb"/>
+                                                                        <binding destination="bbL-n5-yGX" name="value" keyPath="objectValue.creationDate" id="RCb-OZ-pf3">
+                                                                            <dictionary key="options">
+                                                                                <string key="NSValueTransformerName">DateValueTransformer</string>
+                                                                            </dictionary>
+                                                                        </binding>
+                                                                        <binding destination="Dlv-85-Cat" name="enabled" keyPath="self.EDI" id="Z2Q-Eu-3vH"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -975,16 +979,24 @@
                                 </tableHeaderView>
                             </scrollView>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdF-li-JSM">
-                                <rect key="frame" x="354" y="278" width="96" height="22"/>
+                                <rect key="frame" x="271" y="276" width="179" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="cZF-LU-e8r">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </searchFieldCell>
+                                <connections>
+                                    <binding destination="z9C-im-dIn" name="predicate" keyPath="filterPredicate" id="4CY-eE-dYn">
+                                        <dictionary key="options">
+                                            <string key="NSDisplayName">predicate</string>
+                                            <string key="NSPredicateFormat">title contains[cd] $value</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
                             </searchField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-T6-OET">
-                                <rect key="frame" x="2" y="270" width="65" height="32"/>
+                                <rect key="frame" x="2" y="269" width="65" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dzh-EY-RH4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -995,7 +1007,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BdZ-HY-Ry4">
-                                <rect key="frame" x="63" y="271" width="89" height="32"/>
+                                <rect key="frame" x="63" y="269" width="89" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Remove" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JOz-hg-q1x">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1009,10 +1021,11 @@
                     </view>
                     <connections>
                         <outlet property="AlbumListArrayController" destination="z9C-im-dIn" id="cwZ-rI-2FY"/>
+                        <outlet property="AlbumListSearchField" destination="OdF-li-JSM" id="tPl-ww-r6z"/>
                     </connections>
                 </viewController>
                 <customObject id="9pR-Gl-t9W" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController mode="entity" entityName="ResolutionEntity" automaticallyPreparesContent="YES" id="z9C-im-dIn">
+                <arrayController mode="entity" entityName="AlbumEntity" automaticallyPreparesContent="YES" id="z9C-im-dIn">
                     <connections>
                         <binding destination="Dlv-85-Cat" name="managedObjectContext" keyPath="self.MOC" id="KR5-61-y3s"/>
                     </connections>

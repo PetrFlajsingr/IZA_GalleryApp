@@ -10,6 +10,8 @@ import Cocoa
 
 class AlbumListViewController: NSViewController {
     @IBOutlet var AlbumListArrayController: NSArrayController!
+
+    @IBOutlet weak var AlbumListSearchField: NSSearchField!
     
     @objc var MOC: NSManagedObjectContext {
         return (NSApplication.shared.delegate as!
@@ -20,7 +22,8 @@ class AlbumListViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        
     }
     
 }
