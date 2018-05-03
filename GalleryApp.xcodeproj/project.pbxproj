@@ -95,6 +95,7 @@
 		4B98687D209A48B100A62C9F /* GalleryApp */ = {
 			isa = PBXGroup;
 			children = (
+				4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */,
 				4B98687E209A48B100A62C9F /* AppDelegate.swift */,
 				4B986880209A48B100A62C9F /* ViewController.swift */,
 				4B986885209A48B300A62C9F /* Assets.xcassets */,
@@ -102,7 +103,6 @@
 				4B98688A209A48B300A62C9F /* Info.plist */,
 				4B98688B209A48B300A62C9F /* GalleryApp.entitlements */,
 				4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */,
-				4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */,
 				4B986B02209B767300A62C9F /* DateValueTransformer.swift */,
 			);
 			path = GalleryApp;

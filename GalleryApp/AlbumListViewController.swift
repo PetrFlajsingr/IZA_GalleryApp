@@ -11,6 +11,8 @@ import Cocoa
 class AlbumListViewController: NSViewController {
     @IBOutlet var AlbumListArrayController: NSArrayController!
 
+    @IBOutlet weak var AlbumListTableView: NSTableView!
+    
     @IBOutlet weak var AlbumListSearchField: NSSearchField!
     
     @objc var MOC: NSManagedObjectContext {

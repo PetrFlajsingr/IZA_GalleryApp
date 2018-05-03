@@ -707,8 +707,7 @@
                 <tabViewController selectedTabViewItemIndex="0" id="ikK-ac-EcN" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="Album List" id="CEZ-4x-bLe"/>
-                        <tabViewItem label="Detail" identifier="" id="QaQ-Ki-s1o"/>
-                        <tabViewItem label="Photos" identifier="" id="xbU-5J-AhT"/>
+                        <tabViewItem id="uxg-8h-lYb"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="Rve-by-0TL">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -721,143 +720,12 @@
                     <connections>
                         <outlet property="tabView" destination="Rve-by-0TL" id="s0o-Ov-XkX"/>
                         <segue destination="Dlv-85-Cat" kind="relationship" relationship="tabItems" id="8gY-BE-vPB"/>
-                        <segue destination="qoG-Nr-JuV" kind="relationship" relationship="tabItems" id="kIh-00-CNe"/>
-                        <segue destination="IPx-mW-NPQ" kind="relationship" relationship="tabItems" id="62E-wQ-5Ee"/>
+                        <segue destination="R1i-a2-fFi" kind="relationship" relationship="tabItems" id="Dr1-Y2-bgx"/>
                     </connections>
                 </tabViewController>
                 <customObject id="SCf-e9-3xp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="60" y="696"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="6Bu-Zh-5lC">
-            <objects>
-                <viewController id="qoG-Nr-JuV" sceneMemberID="viewController">
-                    <view key="view" id="wIZ-Q4-iKS">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2y-Mn-b09">
-                                <rect key="frame" x="118" y="233" width="215" height="22"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Sa4-RN-GOt">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nsD-2V-K9c">
-                                <rect key="frame" x="118" y="263" width="31" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="Rve-Pe-L5f">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6XT-iO-jCd">
-                                <rect key="frame" x="118" y="202" width="74" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Description" id="t6r-Jp-PGe">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yud-W1-zmI">
-                                <rect key="frame" x="118" y="144" width="215" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ujm-aP-ZiF">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ie-PK-f5b">
-                                <rect key="frame" x="120" y="106" width="86" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Creation date" id="WVW-6y-GZO">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaQ-PB-iPo">
-                                <rect key="frame" x="118" y="76" width="215" height="22"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="lzQ-3f-Q1F">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OsN-MG-758">
-                                <rect key="frame" x="122" y="43" width="78" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Photo count" id="2x8-Wx-GHv">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1U-jf-ek3">
-                                <rect key="frame" x="306" y="41" width="27" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="zqf-Na-LpI">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                    </view>
-                </viewController>
-                <customObject id="9Nn-hS-Fbt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <userDefaultsController representsSharedInstance="YES" id="zOH-Cf-Rxb"/>
-            </objects>
-            <point key="canvasLocation" x="633" y="457"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ZOe-D0-Du8">
-            <objects>
-                <viewController id="IPx-mW-NPQ" sceneMemberID="viewController">
-                    <view key="view" id="1U4-TT-Dpf">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaU-oi-bTS">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="zZx-S6-SxN">
-                                    <rect key="frame" x="1" y="1" width="448" height="298"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <collectionView ambiguous="YES" id="5GS-LQ-uRC">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="158"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="OMR-j0-azO">
-                                                <size key="itemSize" width="50" height="50"/>
-                                            </collectionViewFlowLayout>
-                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </collectionView>
-                                    </subviews>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="DVZ-jT-FLj">
-                                    <rect key="frame" x="1" y="-15" width="0.0" height="16"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="p6a-fC-QdP">
-                                    <rect key="frame" x="-15" y="1" width="16" height="0.0"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
-                        </subviews>
-                    </view>
-                </viewController>
-                <customObject id="rC2-8C-Kmm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="633" y="869"/>
         </scene>
         <!--Album list-->
         <scene sceneID="AXf-GT-OC2">
@@ -962,6 +830,7 @@
                                             </tableColumns>
                                             <connections>
                                                 <binding destination="z9C-im-dIn" name="content" keyPath="arrangedObjects" id="c7L-wD-2ji"/>
+                                                <binding destination="z9C-im-dIn" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="c7L-wD-2ji" id="J47-Ux-V1r"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
@@ -1085,29 +954,28 @@
                                     </binding>
                                 </connections>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wbs-16-pY4">
-                                <rect key="frame" x="393" y="211" width="78" height="17"/>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hrv-oa-MST">
+                                <rect key="frame" x="383" y="148" width="119" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Photo count" id="w8P-j0-w7a">
+                                <buttonCell key="cell" type="push" title="Show photos" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XVM-9F-sYK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Z-UY-DzF">
-                                <rect key="frame" x="577" y="209" width="27" height="22"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oR3-xU-fdU">
+                                <rect key="frame" x="544" y="148" width="109" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Lv4-Ka-RYV">
+                                <buttonCell key="cell" type="push" title="Edit photos" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZcV-L0-IjP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="AlbumListArrayController" destination="z9C-im-dIn" id="cwZ-rI-2FY"/>
                         <outlet property="AlbumListSearchField" destination="OdF-li-JSM" id="tPl-ww-r6z"/>
+                        <outlet property="AlbumListTableView" destination="Efj-U6-x9v" id="GXX-gk-WWm"/>
                     </connections>
                 </viewController>
                 <customObject id="9pR-Gl-t9W" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1118,6 +986,19 @@
                 </arrayController>
             </objects>
             <point key="canvasLocation" x="57" y="1377"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="frT-L1-tkn">
+            <objects>
+                <viewController id="R1i-a2-fFi" sceneMemberID="viewController">
+                    <view key="view" id="qd5-lb-OHp">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="MJ8-Qt-8Gb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="672"/>
         </scene>
     </scenes>
 </document>
