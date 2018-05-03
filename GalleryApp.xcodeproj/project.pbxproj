@@ -12,8 +12,6 @@
 		4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */; };
 		4B986886209A48B300A62C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B986885209A48B300A62C9F /* Assets.xcassets */; };
 		4B986889209A48B300A62C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B986887209A48B300A62C9F /* Main.storyboard */; };
-		4B986895209A48B300A62C9F /* GalleryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B986894209A48B300A62C9F /* GalleryAppTests.swift */; };
-		4B9868A0209A48B300A62C9F /* GalleryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98689F209A48B300A62C9F /* GalleryAppUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +41,7 @@
 		4B98688A209A48B300A62C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B98688B209A48B300A62C9F /* GalleryApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GalleryApp.entitlements; sourceTree = "<group>"; };
 		4B986890209A48B300A62C9F /* GalleryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B986894209A48B300A62C9F /* GalleryAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAppTests.swift; sourceTree = "<group>"; };
-		4B986896209A48B300A62C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B98689B209A48B300A62C9F /* GalleryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B98689F209A48B300A62C9F /* GalleryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAppUITests.swift; sourceTree = "<group>"; };
-		4B9868A1209A48B300A62C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				4B98687D209A48B100A62C9F /* GalleryApp */,
-				4B986893209A48B300A62C9F /* GalleryAppTests */,
-				4B98689E209A48B300A62C9F /* GalleryAppUITests */,
 				4B98687C209A48B100A62C9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,24 +99,6 @@
 				4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */,
 			);
 			path = GalleryApp;
-			sourceTree = "<group>";
-		};
-		4B986893209A48B300A62C9F /* GalleryAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				4B986894209A48B300A62C9F /* GalleryAppTests.swift */,
-				4B986896209A48B300A62C9F /* Info.plist */,
-			);
-			path = GalleryAppTests;
-			sourceTree = "<group>";
-		};
-		4B98689E209A48B300A62C9F /* GalleryAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4B98689F209A48B300A62C9F /* GalleryAppUITests.swift */,
-				4B9868A1209A48B300A62C9F /* Info.plist */,
-			);
-			path = GalleryAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B986895209A48B300A62C9F /* GalleryAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B9868A0209A48B300A62C9F /* GalleryAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
