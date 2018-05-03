@@ -48,11 +48,11 @@
     </entity>
     <elements>
         <element name="AlbumEntity" positionX="-38" positionY="126" width="128" height="105"/>
-        <element name="ItemEntity" positionX="160" positionY="-96" width="128" height="58"/>
-        <element name="ItemOnPhotoEntity" positionX="108" positionY="36" width="128" height="88"/>
+        <element name="ItemEntity" positionX="160" positionY="-96" width="128" height="60"/>
+        <element name="ItemOnPhotoEntity" positionX="108" positionY="36" width="128" height="90"/>
         <element name="ObjectEntity" positionX="277" positionY="-201" width="128" height="75"/>
         <element name="PersonEntity" positionX="405" positionY="-99" width="128" height="75"/>
-        <element name="PersonOnPhotoEntity" positionX="457" positionY="27" width="128" height="88"/>
+        <element name="PersonOnPhotoEntity" positionX="457" positionY="27" width="128" height="90"/>
         <element name="PhotoEntity" positionX="288" positionY="171" width="128" height="165"/>
         <element name="PositionEntity" positionX="279" positionY="8" width="128" height="75"/>
         <element name="ResolutionEntity" positionX="97" positionY="297" width="128" height="90"/>

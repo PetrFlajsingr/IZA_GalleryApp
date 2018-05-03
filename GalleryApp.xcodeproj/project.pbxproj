@@ -12,6 +12,7 @@
 		4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */; };
 		4B986886209A48B300A62C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B986885209A48B300A62C9F /* Assets.xcassets */; };
 		4B986889209A48B300A62C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B986887209A48B300A62C9F /* Main.storyboard */; };
+		4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		4B98688B209A48B300A62C9F /* GalleryApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GalleryApp.entitlements; sourceTree = "<group>"; };
 		4B986890209A48B300A62C9F /* GalleryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B98689B209A48B300A62C9F /* GalleryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				4B98688A209A48B300A62C9F /* Info.plist */,
 				4B98688B209A48B300A62C9F /* GalleryApp.entitlements */,
 				4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */,
+				4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */,
 			);
 			path = GalleryApp;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */,
 				4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */,
 				4B986881209A48B100A62C9F /* ViewController.swift in Sources */,
 				4B98687F209A48B100A62C9F /* AppDelegate.swift in Sources */,
