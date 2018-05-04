@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="AlbumEntity" representedClassName=".AlbumEntity" syncable="YES" codeGenerationType="class">
+    <entity name="AlbumEntity" representedClassName=".AlbumEntity" syncable="YES">
         <attribute name="creationDate" attributeType="Date" defaultDateTimeInterval="547046040" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" defaultValueString="Description" syncable="YES"/>
         <attribute name="title" attributeType="String" defaultValueString="Title" syncable="YES"/>
         <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="albums" inverseEntity="PhotoEntity" syncable="YES"/>
     </entity>
-    <entity name="ItemEntity" representedClassName=".ItemEntity" parentEntity="ObjectEntity" syncable="YES" codeGenerationType="class">
+    <entity name="ItemEntity" representedClassName=".ItemEntity" parentEntity="ObjectEntity" syncable="YES">
         <relationship name="photoRecords" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ItemOnPhotoEntity" inverseName="item" inverseEntity="ItemOnPhotoEntity" syncable="YES"/>
     </entity>
-    <entity name="ItemOnPhotoEntity" representedClassName=".ItemOnPhotoEntity" syncable="YES" codeGenerationType="class">
+    <entity name="ItemOnPhotoEntity" representedClassName=".ItemOnPhotoEntity" syncable="YES">
         <relationship name="item" maxCount="1" deletionRule="Nullify" destinationEntity="ItemEntity" inverseName="photoRecords" inverseEntity="ItemEntity" syncable="YES"/>
         <relationship name="photo" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="itemsOnPhoto" inverseEntity="PhotoEntity" syncable="YES"/>
         <relationship name="position" maxCount="1" deletionRule="Cascade" destinationEntity="PositionEntity" syncable="YES"/>
     </entity>
-    <entity name="ObjectEntity" representedClassName=".ObjectEntity" isAbstract="YES" syncable="YES" codeGenerationType="class">
+    <entity name="ObjectEntity" representedClassName=".ObjectEntity" isAbstract="YES" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="String" defaultValueString="Descritpion" syncable="YES"/>
         <attribute name="name" attributeType="String" defaultValueString="Name" syncable="YES"/>
     </entity>
-    <entity name="PersonEntity" representedClassName=".PersonEntity" parentEntity="ObjectEntity" syncable="YES" codeGenerationType="class">
+    <entity name="PersonEntity" representedClassName=".PersonEntity" parentEntity="ObjectEntity" syncable="YES">
         <attribute name="surname" attributeType="String" defaultValueString="Surname" syncable="YES"/>
         <relationship name="photoRecords" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PersonOnPhotoEntity" inverseName="person" inverseEntity="PersonOnPhotoEntity" syncable="YES"/>
     </entity>
-    <entity name="PersonOnPhotoEntity" representedClassName=".PersonOnPhotoEntity" syncable="YES" codeGenerationType="class">
+    <entity name="PersonOnPhotoEntity" representedClassName=".PersonOnPhotoEntity" syncable="YES">
         <relationship name="person" maxCount="1" deletionRule="Nullify" destinationEntity="PersonEntity" inverseName="photoRecords" inverseEntity="PersonEntity" syncable="YES"/>
         <relationship name="photo" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="personsOnPhoto" inverseEntity="PhotoEntity" syncable="YES"/>
         <relationship name="position" maxCount="1" deletionRule="Cascade" destinationEntity="PositionEntity" syncable="YES"/>
     </entity>
-    <entity name="PhotoEntity" representedClassName=".PhotoEntity" syncable="YES" codeGenerationType="class">
+    <entity name="PhotoEntity" representedClassName=".PhotoEntity" syncable="YES">
         <attribute name="creationDate" attributeType="Date" defaultDateTimeInterval="547046160" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="format" attributeType="String" defaultValueString="unknown" syncable="YES"/>
         <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -38,11 +38,11 @@
         <relationship name="personsOnPhoto" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PersonOnPhotoEntity" inverseName="photo" inverseEntity="PersonOnPhotoEntity" syncable="YES"/>
         <relationship name="resolution" maxCount="1" deletionRule="Cascade" destinationEntity="ResolutionEntity" inverseName="photo" inverseEntity="ResolutionEntity" syncable="YES"/>
     </entity>
-    <entity name="PositionEntity" representedClassName=".PositionEntity" syncable="YES" codeGenerationType="class">
+    <entity name="PositionEntity" representedClassName=".PositionEntity" syncable="YES">
         <attribute name="positionX" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="positionY" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="ResolutionEntity" representedClassName=".ResolutionEntity" syncable="YES" codeGenerationType="class">
+    <entity name="ResolutionEntity" representedClassName=".ResolutionEntity" syncable="YES">
         <attribute name="resolutionX" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="resolutionY" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="resolution" inverseEntity="PhotoEntity" syncable="YES"/>

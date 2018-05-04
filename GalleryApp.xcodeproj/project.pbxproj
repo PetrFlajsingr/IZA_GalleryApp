@@ -17,6 +17,24 @@
 		4BDC92D4209C303900699320 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92D3209C303900699320 /* PhotosViewController.swift */; };
 		4BDC92DA209C47F300699320 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92D9209C47F300699320 /* ItemsViewController.swift */; };
 		4BDC92DC209C480200699320 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92DB209C480200699320 /* PeopleViewController.swift */; };
+		4BDC92F3209C642D00699320 /* ItemEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E1209C642D00699320 /* ItemEntity+CoreDataClass.swift */; };
+		4BDC92F4209C642D00699320 /* ItemEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E2209C642D00699320 /* ItemEntity+CoreDataProperties.swift */; };
+		4BDC92F5209C642D00699320 /* ResolutionEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E3209C642D00699320 /* ResolutionEntity+CoreDataClass.swift */; };
+		4BDC92F6209C642D00699320 /* ResolutionEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E4209C642D00699320 /* ResolutionEntity+CoreDataProperties.swift */; };
+		4BDC92F7209C642D00699320 /* AlbumEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E5209C642D00699320 /* AlbumEntity+CoreDataClass.swift */; };
+		4BDC92F8209C642D00699320 /* AlbumEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E6209C642D00699320 /* AlbumEntity+CoreDataProperties.swift */; };
+		4BDC92F9209C642D00699320 /* PersonEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E7209C642D00699320 /* PersonEntity+CoreDataClass.swift */; };
+		4BDC92FA209C642D00699320 /* PersonEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E8209C642D00699320 /* PersonEntity+CoreDataProperties.swift */; };
+		4BDC92FB209C642D00699320 /* PositionEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E9209C642D00699320 /* PositionEntity+CoreDataClass.swift */; };
+		4BDC92FC209C642D00699320 /* PositionEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92EA209C642D00699320 /* PositionEntity+CoreDataProperties.swift */; };
+		4BDC92FD209C642D00699320 /* PhotoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92EB209C642D00699320 /* PhotoEntity+CoreDataClass.swift */; };
+		4BDC92FE209C642D00699320 /* PhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92EC209C642D00699320 /* PhotoEntity+CoreDataProperties.swift */; };
+		4BDC92FF209C642D00699320 /* ObjectEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92ED209C642D00699320 /* ObjectEntity+CoreDataClass.swift */; };
+		4BDC9300209C642D00699320 /* ObjectEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92EE209C642D00699320 /* ObjectEntity+CoreDataProperties.swift */; };
+		4BDC9301209C642D00699320 /* ItemOnPhotoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92EF209C642D00699320 /* ItemOnPhotoEntity+CoreDataClass.swift */; };
+		4BDC9302209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92F0209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift */; };
+		4BDC9303209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92F1209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift */; };
+		4BDC9304209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92F2209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +71,24 @@
 		4BDC92D3209C303900699320 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		4BDC92D9209C47F300699320 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		4BDC92DB209C480200699320 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		4BDC92E1209C642D00699320 /* ItemEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/ItemEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92E2209C642D00699320 /* ItemEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/ItemEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92E3209C642D00699320 /* ResolutionEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ResolutionEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/ResolutionEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92E4209C642D00699320 /* ResolutionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ResolutionEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/ResolutionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92E5209C642D00699320 /* AlbumEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AlbumEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/AlbumEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92E6209C642D00699320 /* AlbumEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AlbumEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/AlbumEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92E7209C642D00699320 /* PersonEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/PersonEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92E8209C642D00699320 /* PersonEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/PersonEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92E9209C642D00699320 /* PositionEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PositionEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/PositionEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92EA209C642D00699320 /* PositionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PositionEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/PositionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92EB209C642D00699320 /* PhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PhotoEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/PhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92EC209C642D00699320 /* PhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PhotoEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/PhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92ED209C642D00699320 /* ObjectEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ObjectEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/ObjectEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92EE209C642D00699320 /* ObjectEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ObjectEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/ObjectEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92EF209C642D00699320 /* ItemOnPhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemOnPhotoEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/ItemOnPhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92F0209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemOnPhotoEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/ItemOnPhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92F1209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonOnPhotoEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/PersonOnPhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92F2209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonOnPhotoEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/PersonOnPhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +119,24 @@
 		4B986872209A48B100A62C9F = {
 			isa = PBXGroup;
 			children = (
+				4BDC92E1209C642D00699320 /* ItemEntity+CoreDataClass.swift */,
+				4BDC92E2209C642D00699320 /* ItemEntity+CoreDataProperties.swift */,
+				4BDC92E3209C642D00699320 /* ResolutionEntity+CoreDataClass.swift */,
+				4BDC92E4209C642D00699320 /* ResolutionEntity+CoreDataProperties.swift */,
+				4BDC92E5209C642D00699320 /* AlbumEntity+CoreDataClass.swift */,
+				4BDC92E6209C642D00699320 /* AlbumEntity+CoreDataProperties.swift */,
+				4BDC92E7209C642D00699320 /* PersonEntity+CoreDataClass.swift */,
+				4BDC92E8209C642D00699320 /* PersonEntity+CoreDataProperties.swift */,
+				4BDC92E9209C642D00699320 /* PositionEntity+CoreDataClass.swift */,
+				4BDC92EA209C642D00699320 /* PositionEntity+CoreDataProperties.swift */,
+				4BDC92EB209C642D00699320 /* PhotoEntity+CoreDataClass.swift */,
+				4BDC92EC209C642D00699320 /* PhotoEntity+CoreDataProperties.swift */,
+				4BDC92ED209C642D00699320 /* ObjectEntity+CoreDataClass.swift */,
+				4BDC92EE209C642D00699320 /* ObjectEntity+CoreDataProperties.swift */,
+				4BDC92EF209C642D00699320 /* ItemOnPhotoEntity+CoreDataClass.swift */,
+				4BDC92F0209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift */,
+				4BDC92F1209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift */,
+				4BDC92F2209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift */,
 				4B98687D209A48B100A62C9F /* GalleryApp */,
 				4B98687C209A48B100A62C9F /* Products */,
 			);
@@ -247,14 +301,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BDC92F9209C642D00699320 /* PersonEntity+CoreDataClass.swift in Sources */,
 				4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */,
 				4BDC92DC209C480200699320 /* PeopleViewController.swift in Sources */,
 				4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */,
+				4BDC92FF209C642D00699320 /* ObjectEntity+CoreDataClass.swift in Sources */,
 				4B986B03209B767300A62C9F /* DateValueTransformer.swift in Sources */,
+				4BDC92FC209C642D00699320 /* PositionEntity+CoreDataProperties.swift in Sources */,
+				4BDC92F6209C642D00699320 /* ResolutionEntity+CoreDataProperties.swift in Sources */,
 				4BDC92D4209C303900699320 /* PhotosViewController.swift in Sources */,
+				4BDC9301209C642D00699320 /* ItemOnPhotoEntity+CoreDataClass.swift in Sources */,
+				4BDC9300209C642D00699320 /* ObjectEntity+CoreDataProperties.swift in Sources */,
+				4BDC9302209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift in Sources */,
+				4BDC92F4209C642D00699320 /* ItemEntity+CoreDataProperties.swift in Sources */,
+				4BDC92FD209C642D00699320 /* PhotoEntity+CoreDataClass.swift in Sources */,
 				4BDC92DA209C47F300699320 /* ItemsViewController.swift in Sources */,
+				4BDC9304209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift in Sources */,
+				4BDC92F8209C642D00699320 /* AlbumEntity+CoreDataProperties.swift in Sources */,
+				4BDC92F5209C642D00699320 /* ResolutionEntity+CoreDataClass.swift in Sources */,
 				4B986881209A48B100A62C9F /* ViewController.swift in Sources */,
+				4BDC92FB209C642D00699320 /* PositionEntity+CoreDataClass.swift in Sources */,
+				4BDC92F3209C642D00699320 /* ItemEntity+CoreDataClass.swift in Sources */,
 				4B98687F209A48B100A62C9F /* AppDelegate.swift in Sources */,
+				4BDC92FE209C642D00699320 /* PhotoEntity+CoreDataProperties.swift in Sources */,
+				4BDC92F7209C642D00699320 /* AlbumEntity+CoreDataClass.swift in Sources */,
+				4BDC9303209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift in Sources */,
+				4BDC92FA209C642D00699320 /* PersonEntity+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
