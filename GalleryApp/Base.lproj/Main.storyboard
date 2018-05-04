@@ -729,7 +729,7 @@
                 </tabViewController>
                 <customObject id="SCf-e9-3xp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="696"/>
+            <point key="canvasLocation" x="-3" y="449"/>
         </scene>
         <!--Album list-->
         <scene sceneID="AXf-GT-OC2">
@@ -1065,7 +1065,7 @@ IA
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="57" y="1377"/>
+            <point key="canvasLocation" x="-759" y="1279"/>
         </scene>
         <!--Photos-->
         <scene sceneID="frT-L1-tkn">
@@ -1163,20 +1163,7 @@ IA
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="778" y="765"/>
-        </scene>
-        <!--Collection View Item-->
-        <scene sceneID="jhg-pA-6dO">
-            <objects>
-                <collectionViewItem id="7Ze-Rw-LrN" sceneMemberID="viewController">
-                    <view key="view" id="vrU-tl-gsr">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </collectionViewItem>
-                <customObject id="hVc-W9-5fj" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1253" y="767"/>
+            <point key="canvasLocation" x="-3" y="1279"/>
         </scene>
         <!--Items-->
         <scene sceneID="asp-12-oSk">
@@ -1343,7 +1330,7 @@ IA
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn identifier="" width="195" minWidth="40" maxWidth="1000" id="bfw-jF-mYW">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Photos">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1366,6 +1353,9 @@ IA
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="SzN-uY-xDv" name="value" keyPath="objectValue.photo.title" id="ytZ-jy-mF4"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
@@ -1380,6 +1370,9 @@ IA
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <binding destination="BUB-4z-2cK" name="content" keyPath="selection.photoRecords" id="f7I-UL-K56"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -1451,7 +1444,7 @@ IA
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="810" y="1386"/>
+            <point key="canvasLocation" x="748" y="1279"/>
         </scene>
         <!--People-->
         <scene sceneID="sPH-cV-gVG">
@@ -1644,7 +1637,7 @@ IA
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn identifier="" width="206" minWidth="40" maxWidth="1000" id="m0K-9u-iSe">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Photos">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -1667,6 +1660,9 @@ IA
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="Nj1-9m-Qg6" name="value" keyPath="objectValue.photo.title" id="sn5-MG-VuB"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
@@ -1681,6 +1677,9 @@ IA
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <binding destination="IK5-vh-MgP" name="content" keyPath="selection.photoRecords" id="GNH-mo-JNd"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -1791,7 +1790,7 @@ IA
                     </connections>
                 </arrayController>
             </objects>
-            <point key="canvasLocation" x="-766" y="840"/>
+            <point key="canvasLocation" x="1495" y="1279"/>
         </scene>
     </scenes>
 </document>
