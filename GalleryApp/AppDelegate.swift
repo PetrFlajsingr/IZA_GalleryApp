@@ -18,6 +18,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         ValueTransformer.setValueTransformer(DateValueTransformer(), forName: NSValueTransformerName(rawValue: "DateValueTransformer"))
         
         ValueTransformer.setValueTransformer(ListCountValueTransformer(), forName: NSValueTransformerName(rawValue: "ListCountValueTransformer"))
+        
+        ValueTransformer.setValueTransformer(ImageDataValueTransformer(), forName: NSValueTransformerName(rawValue: "ImageDataValueTransformer"))
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {

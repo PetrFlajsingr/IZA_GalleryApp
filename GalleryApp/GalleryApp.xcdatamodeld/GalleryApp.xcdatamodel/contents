@@ -30,7 +30,7 @@
     <entity name="PhotoEntity" representedClassName=".PhotoEntity" syncable="YES">
         <attribute name="creationDate" attributeType="Date" defaultDateTimeInterval="547046160" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="format" attributeType="String" defaultValueString="unknown" syncable="YES"/>
-        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageData" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="pathToFile" attributeType="String" defaultValueString="/" syncable="YES"/>
         <attribute name="title" attributeType="String" defaultValueString="Title" syncable="YES"/>
         <relationship name="albums" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AlbumEntity" inverseName="photos" inverseEntity="AlbumEntity" syncable="YES"/>

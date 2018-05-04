@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B30E962209C9BF3003622D1 /* PhotoCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B30E960209C9BF3003622D1 /* PhotoCollectionViewItem.swift */; };
+		4B30E963209C9BF3003622D1 /* PhotoCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B30E961209C9BF3003622D1 /* PhotoCollectionViewItem.xib */; };
+		4B30E965209CB880003622D1 /* ImageDataValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B30E964209CB880003622D1 /* ImageDataValueTransformer.swift */; };
+		4B6C9DEF209CD4BA00864CE1 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C9DEE209CD4BA00864CE1 /* PhotosTableViewController.swift */; };
+		4B6C9DF1209CD7D300864CE1 /* ImageTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6C9DF0209CD7D300864CE1 /* ImageTableCellView.swift */; };
 		4B98687F209A48B100A62C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98687E209A48B100A62C9F /* AppDelegate.swift */; };
 		4B986881209A48B100A62C9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B986880209A48B100A62C9F /* ViewController.swift */; };
 		4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */; };
@@ -14,7 +19,6 @@
 		4B986889209A48B300A62C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B986887209A48B300A62C9F /* Main.storyboard */; };
 		4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */; };
 		4B986B03209B767300A62C9F /* DateValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B986B02209B767300A62C9F /* DateValueTransformer.swift */; };
-		4BDC92D4209C303900699320 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92D3209C303900699320 /* PhotosViewController.swift */; };
 		4BDC92DA209C47F300699320 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92D9209C47F300699320 /* ItemsViewController.swift */; };
 		4BDC92DC209C480200699320 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92DB209C480200699320 /* PeopleViewController.swift */; };
 		4BDC92F3209C642D00699320 /* ItemEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92E1209C642D00699320 /* ItemEntity+CoreDataClass.swift */; };
@@ -56,6 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B30E960209C9BF3003622D1 /* PhotoCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewItem.swift; sourceTree = "<group>"; };
+		4B30E961209C9BF3003622D1 /* PhotoCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewItem.xib; sourceTree = "<group>"; };
+		4B30E964209CB880003622D1 /* ImageDataValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataValueTransformer.swift; sourceTree = "<group>"; };
+		4B6C9DEE209CD4BA00864CE1 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
+		4B6C9DF0209CD7D300864CE1 /* ImageTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableCellView.swift; sourceTree = "<group>"; };
 		4B98687B209A48B100A62C9F /* GalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B98687E209A48B100A62C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B986880209A48B100A62C9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +78,6 @@
 		4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		4B986ABA209B497C00A62C9F /* GalleryApp 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GalleryApp 2.xcdatamodel"; sourceTree = "<group>"; };
 		4B986B02209B767300A62C9F /* DateValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueTransformer.swift; sourceTree = "<group>"; };
-		4BDC92D3209C303900699320 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		4BDC92D9209C47F300699320 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		4BDC92DB209C480200699320 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		4BDC92E1209C642D00699320 /* ItemEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/ItemEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -166,10 +174,14 @@
 				4B98688B209A48B300A62C9F /* GalleryApp.entitlements */,
 				4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */,
 				4B986B02209B767300A62C9F /* DateValueTransformer.swift */,
-				4BDC92D3209C303900699320 /* PhotosViewController.swift */,
 				4BDC92D9209C47F300699320 /* ItemsViewController.swift */,
 				4BDC92DB209C480200699320 /* PeopleViewController.swift */,
 				4BDC9305209C669D00699320 /* ListCountValueTransformer.swift */,
+				4B30E960209C9BF3003622D1 /* PhotoCollectionViewItem.swift */,
+				4B30E961209C9BF3003622D1 /* PhotoCollectionViewItem.xib */,
+				4B30E964209CB880003622D1 /* ImageDataValueTransformer.swift */,
+				4B6C9DEE209CD4BA00864CE1 /* PhotosTableViewController.swift */,
+				4B6C9DF0209CD7D300864CE1 /* ImageTableCellView.swift */,
 			);
 			path = GalleryApp;
 			sourceTree = "<group>";
@@ -280,6 +292,7 @@
 			files = (
 				4B986886209A48B300A62C9F /* Assets.xcassets in Resources */,
 				4B986889209A48B300A62C9F /* Main.storyboard in Resources */,
+				4B30E963209C9BF3003622D1 /* PhotoCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,22 +319,25 @@
 			files = (
 				4BDC92F9209C642D00699320 /* PersonEntity+CoreDataClass.swift in Sources */,
 				4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */,
+				4B6C9DF1209CD7D300864CE1 /* ImageTableCellView.swift in Sources */,
 				4BDC92DC209C480200699320 /* PeopleViewController.swift in Sources */,
 				4BDC9306209C669D00699320 /* ListCountValueTransformer.swift in Sources */,
 				4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */,
+				4B30E965209CB880003622D1 /* ImageDataValueTransformer.swift in Sources */,
 				4BDC92FF209C642D00699320 /* ObjectEntity+CoreDataClass.swift in Sources */,
 				4B986B03209B767300A62C9F /* DateValueTransformer.swift in Sources */,
 				4BDC92FC209C642D00699320 /* PositionEntity+CoreDataProperties.swift in Sources */,
 				4BDC92F6209C642D00699320 /* ResolutionEntity+CoreDataProperties.swift in Sources */,
-				4BDC92D4209C303900699320 /* PhotosViewController.swift in Sources */,
 				4BDC9301209C642D00699320 /* ItemOnPhotoEntity+CoreDataClass.swift in Sources */,
 				4BDC9300209C642D00699320 /* ObjectEntity+CoreDataProperties.swift in Sources */,
+				4B30E962209C9BF3003622D1 /* PhotoCollectionViewItem.swift in Sources */,
 				4BDC9302209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift in Sources */,
 				4BDC92F4209C642D00699320 /* ItemEntity+CoreDataProperties.swift in Sources */,
 				4BDC92FD209C642D00699320 /* PhotoEntity+CoreDataClass.swift in Sources */,
 				4BDC92DA209C47F300699320 /* ItemsViewController.swift in Sources */,
 				4BDC9304209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift in Sources */,
 				4BDC92F8209C642D00699320 /* AlbumEntity+CoreDataProperties.swift in Sources */,
+				4B6C9DEF209CD4BA00864CE1 /* PhotosTableViewController.swift in Sources */,
 				4BDC92F5209C642D00699320 /* ResolutionEntity+CoreDataClass.swift in Sources */,
 				4B986881209A48B100A62C9F /* ViewController.swift in Sources */,
 				4BDC92FB209C642D00699320 /* PositionEntity+CoreDataClass.swift in Sources */,
