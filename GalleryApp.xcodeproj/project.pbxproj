@@ -14,6 +14,7 @@
 		4B986889209A48B300A62C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B986887209A48B300A62C9F /* Main.storyboard */; };
 		4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */; };
 		4B986B03209B767300A62C9F /* DateValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B986B02209B767300A62C9F /* DateValueTransformer.swift */; };
+		4BDC92D4209C303900699320 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92D3209C303900699320 /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		4B986ABA209B497C00A62C9F /* GalleryApp 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GalleryApp 2.xcdatamodel"; sourceTree = "<group>"; };
 		4B986B02209B767300A62C9F /* DateValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueTransformer.swift; sourceTree = "<group>"; };
+		4BDC92D3209C303900699320 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				4B98688B209A48B300A62C9F /* GalleryApp.entitlements */,
 				4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */,
 				4B986B02209B767300A62C9F /* DateValueTransformer.swift */,
+				4BDC92D3209C303900699320 /* PhotosViewController.swift */,
 			);
 			path = GalleryApp;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */,
 				4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */,
 				4B986B03209B767300A62C9F /* DateValueTransformer.swift in Sources */,
+				4BDC92D4209C303900699320 /* PhotosViewController.swift in Sources */,
 				4B986881209A48B100A62C9F /* ViewController.swift in Sources */,
 				4B98687F209A48B100A62C9F /* AppDelegate.swift in Sources */,
 			);

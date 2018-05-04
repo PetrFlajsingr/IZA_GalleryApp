@@ -704,7 +704,7 @@
         <!--Tab View Controller-->
         <scene sceneID="dtg-we-ECd">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="ikK-ac-EcN" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="1" id="ikK-ac-EcN" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="Album List" id="CEZ-4x-bLe"/>
                         <tabViewItem id="uxg-8h-lYb"/>
@@ -987,18 +987,18 @@
             </objects>
             <point key="canvasLocation" x="57" y="1377"/>
         </scene>
-        <!--View Controller-->
+        <!--Photos-->
         <scene sceneID="frT-L1-tkn">
             <objects>
-                <viewController id="R1i-a2-fFi" sceneMemberID="viewController">
+                <viewController title="Photos" id="R1i-a2-fFi" sceneMemberID="viewController">
                     <view key="view" id="qd5-lb-OHp">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
                 <customObject id="MJ8-Qt-8Gb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="672"/>
+            <point key="canvasLocation" x="778.5" y="765.5"/>
         </scene>
     </scenes>
 </document>
