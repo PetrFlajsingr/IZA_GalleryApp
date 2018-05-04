@@ -10,9 +10,22 @@ import Cocoa
 
 class PhotosViewController: NSViewController {
 
+    @IBOutlet var PhotosArrayController: NSArrayController!
+    
+    @IBOutlet weak var PhotosCollectionView: NSCollectionView!
+    
+    @objc var MOC: NSManagedObjectContext {
+        return (NSApplication.shared.delegate as!
+            AppDelegate).persistentContainer.viewContext
+    }
+    
+    @objc var EDI : Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
+    
+    
     
 }
