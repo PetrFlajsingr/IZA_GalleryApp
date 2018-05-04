@@ -16,6 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillFinishLaunching(_ notification: Notification) {
         ValueTransformer.setValueTransformer(DateValueTransformer(), forName: NSValueTransformerName(rawValue: "DateValueTransformer"))
+        
+        ValueTransformer.setValueTransformer(ListCountValueTransformer(), forName: NSValueTransformerName(rawValue: "ListCountValueTransformer"))
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {

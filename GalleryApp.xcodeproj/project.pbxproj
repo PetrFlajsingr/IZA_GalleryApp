@@ -35,6 +35,7 @@
 		4BDC9302209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92F0209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift */; };
 		4BDC9303209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92F1209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift */; };
 		4BDC9304209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC92F2209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift */; };
+		4BDC9306209C669D00699320 /* ListCountValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9305209C669D00699320 /* ListCountValueTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		4BDC92F0209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemOnPhotoEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/ItemOnPhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4BDC92F1209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonOnPhotoEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/PersonOnPhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4BDC92F2209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonOnPhotoEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/PersonOnPhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC9305209C669D00699320 /* ListCountValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCountValueTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				4BDC92D3209C303900699320 /* PhotosViewController.swift */,
 				4BDC92D9209C47F300699320 /* ItemsViewController.swift */,
 				4BDC92DB209C480200699320 /* PeopleViewController.swift */,
+				4BDC9305209C669D00699320 /* ListCountValueTransformer.swift */,
 			);
 			path = GalleryApp;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				4BDC92F9209C642D00699320 /* PersonEntity+CoreDataClass.swift in Sources */,
 				4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */,
 				4BDC92DC209C480200699320 /* PeopleViewController.swift in Sources */,
+				4BDC9306209C669D00699320 /* ListCountValueTransformer.swift in Sources */,
 				4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */,
 				4BDC92FF209C642D00699320 /* ObjectEntity+CoreDataClass.swift in Sources */,
 				4B986B03209B767300A62C9F /* DateValueTransformer.swift in Sources */,
