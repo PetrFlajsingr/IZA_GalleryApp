@@ -1261,7 +1261,7 @@ IA
         <!--Album Photo View Controller-->
         <scene sceneID="3vH-2M-IGn">
             <objects>
-                <viewController id="glo-KN-KE5" customClass="AlbumPhotoViewController" customModule="GalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="glo-KN-KE5" customClass="AlbumPhotoViewController" customModule="GalleryApp" sceneMemberID="viewController">
                     <view key="view" id="dqh-BN-nkO">
                         <rect key="frame" x="0.0" y="0.0" width="700" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2231,7 +2231,7 @@ IA
                                                 <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yp8-uy-eov">
                                                     <rect key="frame" x="8" y="15" width="412" height="263"/>
                                                     <clipView key="contentView" id="ahM-WH-02C">
-                                                        <rect key="frame" x="1" y="23" width="410" height="239"/>
+                                                        <rect key="frame" x="1" y="0.0" width="410" height="262"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="pW9-fJ-OWV" viewBased="YES" id="zZf-VZ-920">
@@ -2350,7 +2350,7 @@ IA
                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gb-mv-CdF">
                                             <rect key="frame" x="8" y="15" width="416" height="252"/>
                                             <clipView key="contentView" id="iaz-o9-scm">
-                                                <rect key="frame" x="1" y="23" width="414" height="228"/>
+                                                <rect key="frame" x="1" y="0.0" width="414" height="251"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="dCk-oa-yG2" viewBased="YES" id="4HO-xm-kvj">

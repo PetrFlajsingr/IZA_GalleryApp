@@ -30,6 +30,10 @@ class PhotoDetailViewController: NSViewController {
         PhotoObjectController.fetchPredicate = predicate
     }
     
+    override func viewWillAppear() {
+        view.window?.title = "Photo: " + (selectedPhoto?.title)!
+    }
+    
     @IBOutlet weak var PhotoImageView: NSImageView!
     @IBAction func SaveToFile_OnClick(_ sender: NSButton) {
         let photoEntity = PhotoObjectController.selectedObjects[0] as! PhotoEntity

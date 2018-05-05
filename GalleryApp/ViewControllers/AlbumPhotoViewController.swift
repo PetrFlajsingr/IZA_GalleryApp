@@ -38,6 +38,10 @@ class AlbumPhotoViewController: NSViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadArrayController), name: NSNotification.Name(rawValue: "reloadPhotosInAlbum"), object: nil)
         
+        
+    }
+    
+    override func viewWillAppear() {
         view.window?.title = "Album: " + (selectedAlbum?.title)!
     }
     

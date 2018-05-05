@@ -27,6 +27,10 @@ class AddPhotoToAlbumViewController: NSViewController {
         let predicate = NSPredicate(format: "SUBQUERY(albums, $album, $album = %@).@count = 0", objectID!)
         PhotosArrayController.fetchPredicate = predicate
         
+        
+    }
+    
+    override func viewWillAppear() {
         view.window?.title = "Add photo to album: " + (selectedAlbum?.title)!
     }
     
