@@ -12,7 +12,7 @@
     <entity name="ItemOnPhotoEntity" representedClassName=".ItemOnPhotoEntity" syncable="YES">
         <relationship name="item" maxCount="1" deletionRule="Nullify" destinationEntity="ItemEntity" inverseName="photoRecords" inverseEntity="ItemEntity" syncable="YES"/>
         <relationship name="photo" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="itemsOnPhoto" inverseEntity="PhotoEntity" syncable="YES"/>
-        <relationship name="position" maxCount="1" deletionRule="Cascade" destinationEntity="PositionEntity" syncable="YES"/>
+        <relationship name="position" maxCount="1" deletionRule="Cascade" destinationEntity="PositionEntity" inverseName="item" inverseEntity="PositionEntity" syncable="YES"/>
     </entity>
     <entity name="ObjectEntity" representedClassName=".ObjectEntity" isAbstract="YES" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="String" defaultValueString="Descritpion" syncable="YES"/>
@@ -25,7 +25,7 @@
     <entity name="PersonOnPhotoEntity" representedClassName=".PersonOnPhotoEntity" syncable="YES">
         <relationship name="person" maxCount="1" deletionRule="Nullify" destinationEntity="PersonEntity" inverseName="photoRecords" inverseEntity="PersonEntity" syncable="YES"/>
         <relationship name="photo" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoEntity" inverseName="personsOnPhoto" inverseEntity="PhotoEntity" syncable="YES"/>
-        <relationship name="position" maxCount="1" deletionRule="Cascade" destinationEntity="PositionEntity" syncable="YES"/>
+        <relationship name="position" maxCount="1" deletionRule="Cascade" destinationEntity="PositionEntity" inverseName="person" inverseEntity="PositionEntity" syncable="YES"/>
     </entity>
     <entity name="PhotoEntity" representedClassName=".PhotoEntity" syncable="YES">
         <attribute name="creationDate" attributeType="Date" defaultDateTimeInterval="547046160" usesScalarValueType="NO" syncable="YES"/>
@@ -42,6 +42,8 @@
     <entity name="PositionEntity" representedClassName=".PositionEntity" syncable="YES">
         <attribute name="positionX" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="positionY" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemOnPhotoEntity" inverseName="position" inverseEntity="ItemOnPhotoEntity" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonOnPhotoEntity" inverseName="position" inverseEntity="PersonOnPhotoEntity" syncable="YES"/>
     </entity>
     <entity name="ResolutionEntity" representedClassName=".ResolutionEntity" syncable="YES">
         <attribute name="resolutionX" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -56,7 +58,7 @@
         <element name="PersonEntity" positionX="405" positionY="-99" width="128" height="75"/>
         <element name="PersonOnPhotoEntity" positionX="457" positionY="27" width="128" height="90"/>
         <element name="PhotoEntity" positionX="288" positionY="171" width="128" height="195"/>
-        <element name="PositionEntity" positionX="279" positionY="8" width="128" height="75"/>
+        <element name="PositionEntity" positionX="279" positionY="8" width="128" height="105"/>
         <element name="ResolutionEntity" positionX="97" positionY="297" width="128" height="90"/>
     </elements>
 </model>

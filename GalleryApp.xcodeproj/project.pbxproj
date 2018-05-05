@@ -14,6 +14,9 @@
 		4B6CD288209CE2EC00B81381 /* PhotoDetailWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CD287209CE2EC00B81381 /* PhotoDetailWindowController.swift */; };
 		4B6CD28A209CE39E00B81381 /* ResolutionValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CD289209CE39E00B81381 /* ResolutionValueTransformer.swift */; };
 		4B8BEF66209E154800E2117E /* NSImage_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BEF65209E154800E2117E /* NSImage_extensions.swift */; };
+		4B8BEF6F209E242A00E2117E /* AddObjectPersonWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BEF6E209E242A00E2117E /* AddObjectPersonWindowController.swift */; };
+		4B8BEF71209E245500E2117E /* AddObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BEF70209E245500E2117E /* AddObjectViewController.swift */; };
+		4B8BEF73209E246A00E2117E /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BEF72209E246A00E2117E /* AddPersonViewController.swift */; };
 		4B98687F209A48B100A62C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98687E209A48B100A62C9F /* AppDelegate.swift */; };
 		4B986881209A48B100A62C9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B986880209A48B100A62C9F /* ViewController.swift */; };
 		4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */; };
@@ -75,6 +78,9 @@
 		4B6CD287209CE2EC00B81381 /* PhotoDetailWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailWindowController.swift; sourceTree = "<group>"; };
 		4B6CD289209CE39E00B81381 /* ResolutionValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionValueTransformer.swift; sourceTree = "<group>"; };
 		4B8BEF65209E154800E2117E /* NSImage_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage_extensions.swift; sourceTree = "<group>"; };
+		4B8BEF6E209E242A00E2117E /* AddObjectPersonWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObjectPersonWindowController.swift; sourceTree = "<group>"; };
+		4B8BEF70209E245500E2117E /* AddObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObjectViewController.swift; sourceTree = "<group>"; };
+		4B8BEF72209E246A00E2117E /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		4B98687B209A48B100A62C9F /* GalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B98687E209A48B100A62C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B986880209A48B100A62C9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 		4B8BEF67209E178600E2117E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */,
 				4B986880209A48B100A62C9F /* ViewController.swift */,
 				4BDC92D9209C47F300699320 /* ItemsViewController.swift */,
 				4BDC92DB209C480200699320 /* PeopleViewController.swift */,
@@ -152,6 +159,8 @@
 				4B6CD285209CE14B00B81381 /* PhotoDetailViewController.swift */,
 				4BFF0929209D9A9100D1EE51 /* AlbumPhotoViewController.swift */,
 				4BFF0933209DA53D00D1EE51 /* AddPhotoToAlbumViewController.swift */,
+				4B8BEF70209E245500E2117E /* AddObjectViewController.swift */,
+				4B8BEF72209E246A00E2117E /* AddPersonViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 				4B6CD287209CE2EC00B81381 /* PhotoDetailWindowController.swift */,
 				4BFF092B209D9ABE00D1EE51 /* AlbumPhotoWindow.swift */,
 				4BFF0931209DA3D300D1EE51 /* AddPhotoToAlbumWindowController.swift */,
+				4B8BEF6E209E242A00E2117E /* AddObjectPersonWindowController.swift */,
 			);
 			path = WindowControllers;
 			sourceTree = "<group>";
@@ -248,7 +258,6 @@
 				4B8BEF69209E17B300E2117E /* Miscelanous */,
 				4B8BEF68209E179000E2117E /* ValueTransformers */,
 				4B8BEF67209E178600E2117E /* ViewControllers */,
-				4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */,
 				4B98687E209A48B100A62C9F /* AppDelegate.swift */,
 				4B986885209A48B300A62C9F /* Assets.xcassets */,
 				4B986887209A48B300A62C9F /* Main.storyboard */,
@@ -392,6 +401,7 @@
 				4BDC92F9209C642D00699320 /* PersonEntity+CoreDataClass.swift in Sources */,
 				4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */,
 				4B6C9DF1209CD7D300864CE1 /* ImageTableCellView.swift in Sources */,
+				4B8BEF6F209E242A00E2117E /* AddObjectPersonWindowController.swift in Sources */,
 				4BDC92DC209C480200699320 /* PeopleViewController.swift in Sources */,
 				4BDC9306209C669D00699320 /* ListCountValueTransformer.swift in Sources */,
 				4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */,
@@ -416,6 +426,7 @@
 				4BFF0932209DA3D300D1EE51 /* AddPhotoToAlbumWindowController.swift in Sources */,
 				4B6C9DEF209CD4BA00864CE1 /* PhotosTableViewController.swift in Sources */,
 				4BDC92F5209C642D00699320 /* ResolutionEntity+CoreDataClass.swift in Sources */,
+				4B8BEF71209E245500E2117E /* AddObjectViewController.swift in Sources */,
 				4B986881209A48B100A62C9F /* ViewController.swift in Sources */,
 				4BDC92FB209C642D00699320 /* PositionEntity+CoreDataClass.swift in Sources */,
 				4BDC92F3209C642D00699320 /* ItemEntity+CoreDataClass.swift in Sources */,
@@ -428,6 +439,7 @@
 				4BFF0928209D87EA00D1EE51 /* ImageUtils.swift in Sources */,
 				4B6CD28A209CE39E00B81381 /* ResolutionValueTransformer.swift in Sources */,
 				4BDC92FA209C642D00699320 /* PersonEntity+CoreDataProperties.swift in Sources */,
+				4B8BEF73209E246A00E2117E /* AddPersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

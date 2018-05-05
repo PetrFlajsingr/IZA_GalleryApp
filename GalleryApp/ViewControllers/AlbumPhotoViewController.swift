@@ -75,16 +75,20 @@ class AlbumPhotoViewController: NSViewController {
                 for photoEntity in PhotoArrayController.arrangedObjects as! [PhotoEntity] {
                     let filepathUrl = URL(string: url.absoluteString + "/" + photoEntity.title! + "." + photoEntity.format!)!
                     
-                    let saveResult = NSImage.writePhotoEntity(entity: photoEntity, url: filepathUrl)
-                    
-                    if(!saveResult.status){
-                        let alert = NSAlert()
+                    DispatchQueue.global().async {
+                        let saveResult = NSImage.writePhotoEntity(entity: photoEntity, url: filepathUrl)
                         
-                        alert.messageText = saveResult.errorMessage
-                        alert.alertStyle = NSAlert.Style.critical
-                        alert.addButton(withTitle: "OK")
-                        
-                        alert.runModal()
+                        if(!saveResult.status){
+                            DispatchQueue.main.async {
+                                let alert = NSAlert()
+                                
+                                alert.messageText = saveResult.errorMessage
+                                alert.alertStyle = NSAlert.Style.critical
+                                alert.addButton(withTitle: "OK")
+                                
+                                alert.runModal()
+                            }
+                        }
                     }
                 }
             }

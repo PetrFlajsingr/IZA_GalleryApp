@@ -32,6 +32,8 @@ class PhotoDetailViewController: NSViewController {
     
     @IBOutlet weak var PhotoImageView: NSImageView!
     @IBAction func SaveToFile_OnClick(_ sender: NSButton) {
+        let photoEntity = PhotoObjectController.selectedObjects[0] as! PhotoEntity
+        
         let dialog = NSSavePanel();
         
         dialog.title                   = "Choose target file";
@@ -40,24 +42,27 @@ class PhotoDetailViewController: NSViewController {
         dialog.canCreateDirectories    = true;
         dialog.allowedFileTypes        = ["jpg", "png", "jpeg", "gif", "bmp"];
         dialog.isExtensionHidden       = false;
+        dialog.nameFieldStringValue    = photoEntity.title!
         
         if (dialog.runModal() == NSApplication.ModalResponse.OK) {
             let result = dialog.url
             
             if let url = result {
-                let photoEntity = PhotoObjectController.selectedObjects[0] as! PhotoEntity
-                
-                let saveResult = NSImage.writePhotoEntity(entity: photoEntity, url: url)
-                
-                if(!saveResult.status){
-                    let alert = NSAlert()
+                DispatchQueue.global().async {
+                    let saveResult = NSImage.writePhotoEntity(entity: photoEntity, url: url)
                     
-                    alert.messageText = saveResult.errorMessage
-                    alert.alertStyle = NSAlert.Style.critical
-                    alert.addButton(withTitle: "OK")
-                    
-                    alert.runModal()
-                }                
+                    if(!saveResult.status){
+                        DispatchQueue.main.async {
+                            let alert = NSAlert()
+                            
+                            alert.messageText = saveResult.errorMessage
+                            alert.alertStyle = NSAlert.Style.critical
+                            alert.addButton(withTitle: "OK")
+                            
+                            alert.runModal()
+                        }
+                    }
+                }
             }
         } else {
             return
