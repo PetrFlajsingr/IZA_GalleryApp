@@ -1292,6 +1292,25 @@ IA
                                                 <action selector="RemovePhotoFromAlbum_OnClick:" target="glo-KN-KE5" id="Hya-6D-T0w"/>
                                             </connections>
                                         </button>
+                                        <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZ4-vF-5Gs">
+                                            <rect key="frame" x="470" y="456" width="200" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="BOp-fK-13O"/>
+                                            </constraints>
+                                            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="Ed7-rf-7qh">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </searchFieldCell>
+                                            <connections>
+                                                <binding destination="Hid-XI-e7I" name="predicate" keyPath="filterPredicate" id="Ecv-KD-ebC">
+                                                    <dictionary key="options">
+                                                        <string key="NSDisplayName">predicate</string>
+                                                        <string key="NSPredicateFormat">title contains[cd] $value</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </searchField>
                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="102" horizontalPageScroll="10" verticalLineScroll="102" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZN-WY-nj3">
                                             <rect key="frame" x="8" y="5" width="662" height="445"/>
                                             <clipView key="contentView" id="uRh-oF-l8o">
@@ -1384,25 +1403,17 @@ IA
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                         </scrollView>
-                                        <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZ4-vF-5Gs">
-                                            <rect key="frame" x="470" y="456" width="200" height="22"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="200" id="BOp-fK-13O"/>
-                                            </constraints>
-                                            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="Ed7-rf-7qh">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nes-u4-cf6">
+                                            <rect key="frame" x="273" y="449" width="134" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Save all images" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="URL-uf-2SQ">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </searchFieldCell>
+                                            </buttonCell>
                                             <connections>
-                                                <binding destination="Hid-XI-e7I" name="predicate" keyPath="filterPredicate" id="Ecv-KD-ebC">
-                                                    <dictionary key="options">
-                                                        <string key="NSDisplayName">predicate</string>
-                                                        <string key="NSPredicateFormat">title contains[cd] $value</string>
-                                                    </dictionary>
-                                                </binding>
+                                                <action selector="SaveAllImages_OnClick:" target="glo-KN-KE5" id="Fjr-yh-scY"/>
                                             </connections>
-                                        </searchField>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="dZ4-vF-5Gs" firstAttribute="bottom" secondItem="a1U-QM-i6G" secondAttribute="bottom" id="12g-Wx-Vrc"/>
@@ -2410,14 +2421,14 @@ IA
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="2r5-Nk-cQO" viewBased="YES" id="cfq-P0-TsA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="186"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="186"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
-                                                            <tableColumn identifier="" width="125" minWidth="40" maxWidth="1000" id="DKI-fo-Stp">
-                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Items on photo">
+                                                            <tableColumn identifier="" width="127" minWidth="40" maxWidth="1000" id="DKI-fo-Stp">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Objects on photo">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -2430,11 +2441,11 @@ IA
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView id="vzq-uz-oZC">
-                                                                        <rect key="frame" x="1" y="1" width="125" height="17"/>
+                                                                        <rect key="frame" x="1" y="1" width="127" height="17"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="9hP-NC-Eei">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="127" height="17"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="uC1-Il-vyh">
                                                                                     <font key="font" metaFont="system"/>
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -2461,7 +2472,7 @@ IA
                                                 <constraint firstAttribute="width" constant="130" id="Y6f-ZF-0d7"/>
                                                 <constraint firstAttribute="height" constant="210" id="eH0-4H-BLN"/>
                                             </constraints>
-                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="9d8-RH-vGT">
+                                            <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="9d8-RH-vGT">
                                                 <rect key="frame" x="1" y="193" width="128" height="16"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
@@ -2470,7 +2481,7 @@ IA
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="2r5-Nk-cQO">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="23"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                         </scrollView>
@@ -2525,7 +2536,7 @@ IA
                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
                                                             <tableColumn identifier="" width="127" minWidth="40" maxWidth="1000" id="7hm-Va-e65">
-                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                                <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="People on photo">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
