@@ -10,6 +10,8 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
@@ -20,6 +22,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         ValueTransformer.setValueTransformer(ListCountValueTransformer(), forName: NSValueTransformerName(rawValue: "ListCountValueTransformer"))
         
         ValueTransformer.setValueTransformer(ImageDataValueTransformer(), forName: NSValueTransformerName(rawValue: "ImageDataValueTransformer"))
+        
+        ValueTransformer.setValueTransformer(ResolutionValueTransformer(), forName: NSValueTransformerName(rawValue: "ResolutionValueTransformer"))
+        
+        ValueTransformer.setValueTransformer(ImageDataDetailValueTransformer(), forName: NSValueTransformerName(rawValue: "ImageDataDetailValueTransformer"))
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -29,6 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
+    var selectedPhoto: PhotoEntity?
 
     // MARK: - Core Data stack
 

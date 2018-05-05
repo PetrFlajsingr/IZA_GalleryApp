@@ -14,15 +14,27 @@ class PhotosTableViewController: NSViewController {
             AppDelegate).persistentContainer.viewContext
     }
     
+    @IBOutlet var PhotoArrayController: NSArrayController!
+    
     @objc var EDI : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
-    @IBAction func OpenDetail_OnClick(_ sender: NSButton) {
+    
+    @IBAction func PhotoTable_OnDoubleClick(_ sender: NSTableView) {
+        let appDelegate = (NSApplication.shared.delegate as! AppDelegate)
         
+        appDelegate.selectedPhoto = PhotoArrayController.selectedObjects[0] as? PhotoEntity
+        
+        photoDetailWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PhotoDetailWindow")) as? PhotoDetailWindowController
+        
+        photoDetailWindow?.showWindow(self)
     }
+
+    
+    var photoDetailWindow : PhotoDetailWindowController?
     
     @IBAction func AddPhoto_OnClick(_ sender: NSButton) {
         let dialog = NSOpenPanel();
