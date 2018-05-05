@@ -8,6 +8,7 @@
 
 import Cocoa
 
+
 class AlbumPhotoViewController: NSViewController {
     @objc var MOC: NSManagedObjectContext {
         return (NSApplication.shared.delegate as!
@@ -27,8 +28,7 @@ class AlbumPhotoViewController: NSViewController {
     @IBOutlet var PhotoArrayController: NSArrayController!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
-        
+
         selectedAlbum = (NSApplication.shared.delegate as! AppDelegate).selectedAlbum
         
         let objectID = selectedAlbum?.objectID
@@ -75,38 +75,12 @@ class AlbumPhotoViewController: NSViewController {
                 for photoEntity in PhotoArrayController.arrangedObjects as! [PhotoEntity] {
                     let filepathUrl = URL(string: url.absoluteString + "/" + photoEntity.title! + "." + photoEntity.format!)!
                     
-                    let imageData : NSData = (photoEntity.imageData! as NSData)
+                    let saveResult = NSImage.writePhotoEntity(entity: photoEntity, url: filepathUrl)
                     
-                    let image = NSImage(data: imageData as Data)
-                    
-                    let pathExtension = photoEntity.format
-                    
-                    var saveResult : Bool = true
-                    
-                    switch pathExtension{
-                    case "jpg", "jpeg":
-                        saveResult = (image?.jpgWrite(url: filepathUrl))!
-                    case "png":
-                        saveResult = (image?.pngWrite(url: filepathUrl))!
-                    case "bmp":
-                        saveResult = (image?.bmpWrite(url: filepathUrl))!
-                    case "gif":
-                        saveResult = (image?.gifWrite(url: filepathUrl))!
-                    default:
+                    if(!saveResult.status){
                         let alert = NSAlert()
                         
-                        alert.messageText = "Unsupported file format"
-                        alert.alertStyle = NSAlert.Style.critical
-                        alert.addButton(withTitle: "OK")
-                        
-                        alert.runModal()
-                        return
-                    }
-                    
-                    if(!saveResult){
-                        let alert = NSAlert()
-                        
-                        alert.messageText = "The file could not be saved"
+                        alert.messageText = saveResult.errorMessage
                         alert.alertStyle = NSAlert.Style.critical
                         alert.addButton(withTitle: "OK")
                         
