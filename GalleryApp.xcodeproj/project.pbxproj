@@ -90,24 +90,24 @@
 		4B986B02209B767300A62C9F /* DateValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueTransformer.swift; sourceTree = "<group>"; };
 		4BDC92D9209C47F300699320 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		4BDC92DB209C480200699320 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
-		4BDC92E1209C642D00699320 /* ItemEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/ItemEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BDC92E2209C642D00699320 /* ItemEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/ItemEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4BDC92E3209C642D00699320 /* ResolutionEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ResolutionEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/ResolutionEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BDC92E4209C642D00699320 /* ResolutionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ResolutionEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/ResolutionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4BDC92E5209C642D00699320 /* AlbumEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AlbumEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/AlbumEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BDC92E6209C642D00699320 /* AlbumEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AlbumEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/AlbumEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4BDC92E7209C642D00699320 /* PersonEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/PersonEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BDC92E8209C642D00699320 /* PersonEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/PersonEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4BDC92E9209C642D00699320 /* PositionEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PositionEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/PositionEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BDC92EA209C642D00699320 /* PositionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PositionEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/PositionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4BDC92EB209C642D00699320 /* PhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PhotoEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/PhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BDC92EC209C642D00699320 /* PhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PhotoEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/PhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4BDC92ED209C642D00699320 /* ObjectEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ObjectEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/ObjectEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BDC92EE209C642D00699320 /* ObjectEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ObjectEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/ObjectEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4BDC92EF209C642D00699320 /* ItemOnPhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemOnPhotoEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/ItemOnPhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BDC92F0209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ItemOnPhotoEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/ItemOnPhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		4BDC92F1209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonOnPhotoEntity+CoreDataClass.swift"; path = "GalleryApp/Entities/PersonOnPhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		4BDC92F2209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PersonOnPhotoEntity+CoreDataProperties.swift"; path = "GalleryApp/Entities/PersonOnPhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92E1209C642D00699320 /* ItemEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92E2209C642D00699320 /* ItemEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92E3209C642D00699320 /* ResolutionEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResolutionEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92E4209C642D00699320 /* ResolutionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResolutionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92E5209C642D00699320 /* AlbumEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92E6209C642D00699320 /* AlbumEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92E7209C642D00699320 /* PersonEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92E8209C642D00699320 /* PersonEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92E9209C642D00699320 /* PositionEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PositionEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92EA209C642D00699320 /* PositionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PositionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92EB209C642D00699320 /* PhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92EC209C642D00699320 /* PhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92ED209C642D00699320 /* ObjectEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92EE209C642D00699320 /* ObjectEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92EF209C642D00699320 /* ItemOnPhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemOnPhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92F0209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemOnPhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4BDC92F1209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonOnPhotoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4BDC92F2209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonOnPhotoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4BDC9305209C669D00699320 /* ListCountValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCountValueTransformer.swift; sourceTree = "<group>"; };
 		4BFF0925209D87C800D1EE51 /* ImageDataDetailValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataDetailValueTransformer.swift; sourceTree = "<group>"; };
 		4BFF0927209D87EA00D1EE51 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
@@ -142,7 +142,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B986872209A48B100A62C9F = {
+		4B8BEF67209E178600E2117E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B986880209A48B100A62C9F /* ViewController.swift */,
+				4BDC92D9209C47F300699320 /* ItemsViewController.swift */,
+				4BDC92DB209C480200699320 /* PeopleViewController.swift */,
+				4B6C9DEE209CD4BA00864CE1 /* PhotosTableViewController.swift */,
+				4B6CD285209CE14B00B81381 /* PhotoDetailViewController.swift */,
+				4BFF0929209D9A9100D1EE51 /* AlbumPhotoViewController.swift */,
+				4BFF0933209DA53D00D1EE51 /* AddPhotoToAlbumViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4B8BEF68209E179000E2117E /* ValueTransformers */ = {
+			isa = PBXGroup;
+			children = (
+				4BFF0925209D87C800D1EE51 /* ImageDataDetailValueTransformer.swift */,
+				4B30E964209CB880003622D1 /* ImageDataValueTransformer.swift */,
+				4B6CD289209CE39E00B81381 /* ResolutionValueTransformer.swift */,
+				4BDC9305209C669D00699320 /* ListCountValueTransformer.swift */,
+				4B986B02209B767300A62C9F /* DateValueTransformer.swift */,
+			);
+			path = ValueTransformers;
+			sourceTree = "<group>";
+		};
+		4B8BEF69209E17B300E2117E /* Miscelanous */ = {
+			isa = PBXGroup;
+			children = (
+				4B8BEF65209E154800E2117E /* NSImage_extensions.swift */,
+				4BFF0927209D87EA00D1EE51 /* ImageUtils.swift */,
+			);
+			path = Miscelanous;
+			sourceTree = "<group>";
+		};
+		4B8BEF6A209E17D700E2117E /* WindowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B6CD287209CE2EC00B81381 /* PhotoDetailWindowController.swift */,
+				4BFF092B209D9ABE00D1EE51 /* AlbumPhotoWindow.swift */,
+				4BFF0931209DA3D300D1EE51 /* AddPhotoToAlbumWindowController.swift */,
+			);
+			path = WindowControllers;
+			sourceTree = "<group>";
+		};
+		4B8BEF6B209E17F500E2117E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B6C9DF0209CD7D300864CE1 /* ImageTableCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B8BEF6D209E184100E2117E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				4BDC92E1209C642D00699320 /* ItemEntity+CoreDataClass.swift */,
@@ -163,6 +216,14 @@
 				4BDC92F0209C642D00699320 /* ItemOnPhotoEntity+CoreDataProperties.swift */,
 				4BDC92F1209C642D00699320 /* PersonOnPhotoEntity+CoreDataClass.swift */,
 				4BDC92F2209C642D00699320 /* PersonOnPhotoEntity+CoreDataProperties.swift */,
+			);
+			name = Entities;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		4B986872209A48B100A62C9F = {
+			isa = PBXGroup;
+			children = (
 				4B98687D209A48B100A62C9F /* GalleryApp */,
 				4B98687C209A48B100A62C9F /* Products */,
 			);
@@ -181,31 +242,19 @@
 		4B98687D209A48B100A62C9F /* GalleryApp */ = {
 			isa = PBXGroup;
 			children = (
+				4B8BEF6D209E184100E2117E /* Entities */,
+				4B8BEF6B209E17F500E2117E /* Views */,
+				4B8BEF6A209E17D700E2117E /* WindowControllers */,
+				4B8BEF69209E17B300E2117E /* Miscelanous */,
+				4B8BEF68209E179000E2117E /* ValueTransformers */,
+				4B8BEF67209E178600E2117E /* ViewControllers */,
 				4B986AB8209B43A500A62C9F /* AlbumListViewController.swift */,
 				4B98687E209A48B100A62C9F /* AppDelegate.swift */,
-				4B986880209A48B100A62C9F /* ViewController.swift */,
 				4B986885209A48B300A62C9F /* Assets.xcassets */,
 				4B986887209A48B300A62C9F /* Main.storyboard */,
 				4B98688A209A48B300A62C9F /* Info.plist */,
 				4B98688B209A48B300A62C9F /* GalleryApp.entitlements */,
 				4B986882209A48B100A62C9F /* GalleryApp.xcdatamodeld */,
-				4B986B02209B767300A62C9F /* DateValueTransformer.swift */,
-				4BDC92D9209C47F300699320 /* ItemsViewController.swift */,
-				4BDC92DB209C480200699320 /* PeopleViewController.swift */,
-				4BDC9305209C669D00699320 /* ListCountValueTransformer.swift */,
-				4B30E964209CB880003622D1 /* ImageDataValueTransformer.swift */,
-				4B6C9DEE209CD4BA00864CE1 /* PhotosTableViewController.swift */,
-				4B6C9DF0209CD7D300864CE1 /* ImageTableCellView.swift */,
-				4B6CD285209CE14B00B81381 /* PhotoDetailViewController.swift */,
-				4B6CD287209CE2EC00B81381 /* PhotoDetailWindowController.swift */,
-				4B6CD289209CE39E00B81381 /* ResolutionValueTransformer.swift */,
-				4BFF0925209D87C800D1EE51 /* ImageDataDetailValueTransformer.swift */,
-				4BFF0927209D87EA00D1EE51 /* ImageUtils.swift */,
-				4BFF0929209D9A9100D1EE51 /* AlbumPhotoViewController.swift */,
-				4BFF092B209D9ABE00D1EE51 /* AlbumPhotoWindow.swift */,
-				4BFF0931209DA3D300D1EE51 /* AddPhotoToAlbumWindowController.swift */,
-				4BFF0933209DA53D00D1EE51 /* AddPhotoToAlbumViewController.swift */,
-				4B8BEF65209E154800E2117E /* NSImage_extensions.swift */,
 			);
 			path = GalleryApp;
 			sourceTree = "<group>";
