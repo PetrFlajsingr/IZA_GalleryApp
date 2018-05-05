@@ -25,12 +25,10 @@ class PhotosTableViewController: NSViewController {
     }
     
     var photoDetailWindow : PhotoDetailWindowController?
-    @IBAction func PhotoTable_OnDoubleClick(_ sender: NSTableView) {
-        let appDelegate = (NSApplication.shared.delegate as! AppDelegate)
-        
-        appDelegate.selectedPhoto = PhotoArrayController.selectedObjects[0] as? PhotoEntity
-        
+    @IBAction func PhotoTable_OnDoubleClick(_ sender: NSTableView) {       
         photoDetailWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PhotoDetailWindow")) as? PhotoDetailWindowController
+        
+        photoDetailWindow?.setPhoto(photoEntity: (PhotoArrayController.selectedObjects[0] as? PhotoEntity)!)
         
         photoDetailWindow?.showWindow(self)
     }

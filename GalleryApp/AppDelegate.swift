@@ -35,10 +35,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-    
-    var selectedPhoto: PhotoEntity?
-    
-    var selectedAlbum: AlbumEntity?
 
     // MARK: - Core Data stack
 

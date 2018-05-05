@@ -20,17 +20,16 @@ class AddPhotoToAlbumViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        selectedAlbum = (NSApplication.shared.delegate as! AppDelegate).selectedAlbum
+    }
+    
+    override func viewWillAppear() {
+        selectedAlbum = (view.window?.windowController as! AddPhotoToAlbumWindowController).getAlbum()
         
         let objectID = selectedAlbum?.objectID
         
         let predicate = NSPredicate(format: "SUBQUERY(albums, $album, $album = %@).@count = 0", objectID!)
         PhotosArrayController.fetchPredicate = predicate
         
-        
-    }
-    
-    override func viewWillAppear() {
         view.window?.title = "Add photo to album: " + (selectedAlbum?.title)!
     }
     

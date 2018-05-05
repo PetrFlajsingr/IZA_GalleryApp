@@ -21,16 +21,16 @@ class PhotoDetailViewController: NSViewController {
     var selectedPhoto : PhotoEntity?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        selectedPhoto = (NSApplication.shared.delegate as! AppDelegate).selectedPhoto
-        
-        let objectID = selectedPhoto?.objectID
-
-        let predicate = NSPredicate(format: "SELF = %@", objectID!)
-        PhotoObjectController.fetchPredicate = predicate
     }
     
     override func viewWillAppear() {
+        selectedPhoto = (view.window?.windowController as! PhotoDetailWindowController).getPhoto()
+        
+        let objectID = selectedPhoto?.objectID
+        
+        let predicate = NSPredicate(format: "SELF = %@", objectID!)
+        PhotoObjectController.fetchPredicate = predicate
+        
         view.window?.title = "Photo: " + (selectedPhoto?.title)!
     }
     

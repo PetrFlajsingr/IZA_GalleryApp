@@ -28,20 +28,19 @@ class AlbumPhotoViewController: NSViewController {
     @IBOutlet var PhotoArrayController: NSArrayController!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        selectedAlbum = (NSApplication.shared.delegate as! AppDelegate).selectedAlbum
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadArrayController), name: NSNotification.Name(rawValue: "reloadPhotosInAlbum"), object: nil)
+    }
+    
+    override func viewWillAppear() {
+        selectedAlbum = (view.window?.windowController as! AlbumPhotoWindow).getAlbum()
         
         let objectID = selectedAlbum?.objectID
         
         let predicate = NSPredicate(format: "SUBQUERY(albums, $album, $album = %@).@count <> 0", objectID!)
         PhotoArrayController.fetchPredicate = predicate
         
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadArrayController), name: NSNotification.Name(rawValue: "reloadPhotosInAlbum"), object: nil)
         
-        
-    }
-    
-    override func viewWillAppear() {
         view.window?.title = "Album: " + (selectedAlbum?.title)!
     }
     
@@ -103,11 +102,9 @@ class AlbumPhotoViewController: NSViewController {
     
     var photoDetailWindow : PhotoDetailWindowController?
     @IBAction func PhotoTable_OnDoubleClick(_ sender: NSTableView) {
-        let appDelegate = (NSApplication.shared.delegate as! AppDelegate)
-        
-        appDelegate.selectedPhoto = PhotoArrayController.selectedObjects[0] as? PhotoEntity
-        
         photoDetailWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PhotoDetailWindow")) as? PhotoDetailWindowController
+        
+        photoDetailWindow?.setPhoto(photoEntity: (PhotoArrayController.selectedObjects[0] as? PhotoEntity)!)
         
         photoDetailWindow?.showWindow(self)
     }

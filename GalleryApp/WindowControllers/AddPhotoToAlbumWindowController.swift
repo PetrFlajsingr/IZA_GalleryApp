@@ -17,4 +17,13 @@ class AddPhotoToAlbumWindowController: NSWindowController {
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
 
+    private var selectedAlbum: AlbumEntity?
+    
+    func setAlbum(albumEntity: AlbumEntity){
+        selectedAlbum = albumEntity
+    }
+    
+    func getAlbum() -> AlbumEntity{
+        return selectedAlbum!
+    }
 }
