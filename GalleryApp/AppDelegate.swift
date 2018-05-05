@@ -37,6 +37,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     var selectedPhoto: PhotoEntity?
+    
+    var selectedAlbum: AlbumEntity?
 
     // MARK: - Core Data stack
 

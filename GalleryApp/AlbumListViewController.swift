@@ -26,4 +26,14 @@ class AlbumListViewController: NSViewController {
         super.viewDidLoad()
     }
     
+    var albumPhotoWindow : AlbumPhotoWindow?
+    @IBAction func AlbumTable_OnDoubleClick(_ sender: NSTableView) {
+        let appDelegate = (NSApplication.shared.delegate as! AppDelegate)
+        
+        appDelegate.selectedAlbum = AlbumListArrayController.selectedObjects[0] as? AlbumEntity
+        
+        albumPhotoWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AlbumPhotoWindow")) as? AlbumPhotoWindow
+        
+        albumPhotoWindow?.showWindow(self)
+    }
 }

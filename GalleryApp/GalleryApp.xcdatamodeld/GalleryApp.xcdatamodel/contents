@@ -29,6 +29,7 @@
     </entity>
     <entity name="PhotoEntity" representedClassName=".PhotoEntity" syncable="YES">
         <attribute name="creationDate" attributeType="Date" defaultDateTimeInterval="547046160" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" defaultValueString="Description" syncable="YES"/>
         <attribute name="format" attributeType="String" defaultValueString="unknown" syncable="YES"/>
         <attribute name="imageData" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="pathToFile" attributeType="String" defaultValueString="/" syncable="YES"/>
@@ -54,7 +55,7 @@
         <element name="ObjectEntity" positionX="277" positionY="-201" width="128" height="75"/>
         <element name="PersonEntity" positionX="405" positionY="-99" width="128" height="75"/>
         <element name="PersonOnPhotoEntity" positionX="457" positionY="27" width="128" height="90"/>
-        <element name="PhotoEntity" positionX="288" positionY="171" width="128" height="180"/>
+        <element name="PhotoEntity" positionX="288" positionY="171" width="128" height="195"/>
         <element name="PositionEntity" positionX="279" positionY="8" width="128" height="75"/>
         <element name="ResolutionEntity" positionX="97" positionY="297" width="128" height="90"/>
     </elements>

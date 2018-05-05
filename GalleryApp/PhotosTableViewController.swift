@@ -13,16 +13,18 @@ class PhotosTableViewController: NSViewController {
         return (NSApplication.shared.delegate as!
             AppDelegate).persistentContainer.viewContext
     }
+    @objc var EDI : Bool = true
     
     @IBOutlet var PhotoArrayController: NSArrayController!
     
-    @objc var EDI : Bool = true
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
     
+    var photoDetailWindow : PhotoDetailWindowController?
     @IBAction func PhotoTable_OnDoubleClick(_ sender: NSTableView) {
         let appDelegate = (NSApplication.shared.delegate as! AppDelegate)
         
@@ -32,9 +34,7 @@ class PhotosTableViewController: NSViewController {
         
         photoDetailWindow?.showWindow(self)
     }
-
     
-    var photoDetailWindow : PhotoDetailWindowController?
     
     @IBAction func AddPhoto_OnClick(_ sender: NSButton) {
         let dialog = NSOpenPanel();
@@ -67,9 +67,19 @@ class PhotosTableViewController: NSViewController {
                 resolution.resolutionX = Int32(imageRep!.pixelsWide)
                 resolution.resolutionY = Int32(imageRep!.pixelsHigh)
                 
+                let fileManager = FileManager.default
+                
+                do {
+                    let attributes = try fileManager.attributesOfItem(atPath: path) as NSDictionary
+                    let creationDate = attributes.fileCreationDate()
+                    photo.creationDate = creationDate! as NSDate
+                }
+                catch{
+                    photo.creationDate = NSDate()
+                }
+                
                 photo.imageData = image.tiffRepresentation! as NSData
                 photo.title = filename
-                photo.creationDate = NSDate()
                 photo.format = pathExtention
                 photo.pathToFile = path
                 photo.resolution = resolution

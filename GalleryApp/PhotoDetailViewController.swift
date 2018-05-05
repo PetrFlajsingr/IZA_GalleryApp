@@ -18,10 +18,13 @@ class PhotoDetailViewController: NSViewController {
     
     @objc var EDI : Bool = true
 
+    var selectedPhoto : PhotoEntity?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let objectID = (NSApplication.shared.delegate as! AppDelegate).selectedPhoto?.objectID
+        selectedPhoto = (NSApplication.shared.delegate as! AppDelegate).selectedPhoto
+        
+        let objectID = selectedPhoto?.objectID
 
         let predicate = NSPredicate(format: "SELF = %@", objectID!)
         PhotoObjectController.fetchPredicate = predicate
@@ -45,7 +48,7 @@ class PhotoDetailViewController: NSViewController {
                 let pathExtention = result?.pathExtension
                 
                 let photoEntity = PhotoObjectController.selectedObjects[0] as! PhotoEntity
-                let imageData : NSData = (photoEntity.imageData as! NSData)
+                let imageData : NSData = (photoEntity.imageData! as NSData)
                 
                 let image = NSImage(data: imageData as Data)
                 
