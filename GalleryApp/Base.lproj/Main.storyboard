@@ -2799,6 +2799,7 @@ IA
                                                         </tableColumns>
                                                         <connections>
                                                             <binding destination="hE8-MO-IMY" name="content" keyPath="arrangedObjects" id="jKF-gR-fUm"/>
+                                                            <binding destination="hE8-MO-IMY" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="jKF-gR-fUm" id="IUD-xH-SfZ"/>
                                                         </connections>
                                                     </tableView>
                                                 </subviews>
@@ -2823,7 +2824,7 @@ IA
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="lPl-3v-P8A" viewBased="YES" id="3qD-v3-grX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="141" height="194"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="140" height="194"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -2869,7 +2870,7 @@ IA
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
                                                             </tableColumn>
-                                                            <tableColumn identifier="" width="66" minWidth="10" maxWidth="3.4028234663852886e+38" id="9j2-so-TeP">
+                                                            <tableColumn identifier="" width="65" minWidth="10" maxWidth="3.4028234663852886e+38" id="9j2-so-TeP">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -2883,11 +2884,11 @@ IA
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView id="JyW-ps-7UD">
-                                                                        <rect key="frame" x="73" y="1" width="66" height="17"/>
+                                                                        <rect key="frame" x="73" y="1" width="65" height="17"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3H-bD-f6k">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="66" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="17"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Nvd-pY-Dop">
                                                                                     <font key="font" metaFont="system"/>
@@ -2908,11 +2909,12 @@ IA
                                                         </tableColumns>
                                                         <connections>
                                                             <binding destination="Eod-qm-Fa1" name="content" keyPath="arrangedObjects" id="D5J-zl-eax"/>
+                                                            <binding destination="Eod-qm-Fa1" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="D5J-zl-eax" id="7Zl-QF-APb"/>
                                                         </connections>
                                                     </tableView>
                                                 </subviews>
                                             </clipView>
-                                            <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="TkZ-5q-4nF">
+                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="TkZ-5q-4nF">
                                                 <rect key="frame" x="1" y="201" width="140" height="16"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
@@ -2921,7 +2923,7 @@ IA
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <tableHeaderView key="headerView" id="lPl-3v-P8A">
-                                                <rect key="frame" x="0.0" y="0.0" width="141" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="23"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </tableHeaderView>
                                         </scrollView>
@@ -2941,6 +2943,9 @@ IA
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="RemoveObjectOrPerson_OnClick:" target="R05-m5-m9s" id="Uxs-W7-5Io"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -3115,7 +3120,9 @@ IA
                     </view>
                     <connections>
                         <outlet property="ObjectsArrayController" destination="hE8-MO-IMY" id="0qt-SC-qop"/>
+                        <outlet property="ObjectsTable" destination="cfq-P0-TsA" id="13Z-Pd-SRt"/>
                         <outlet property="PeopleArrayController" destination="Eod-qm-Fa1" id="tGA-oS-naw"/>
+                        <outlet property="PeopleTable" destination="3qD-v3-grX" id="EIY-jm-ovf"/>
                         <outlet property="PhotoImageView" destination="a1e-yN-rDg" id="vHU-R3-TQ6"/>
                         <outlet property="PhotoObjectController" destination="Qbd-6m-s3p" id="Wig-Jv-J6k"/>
                     </connections>

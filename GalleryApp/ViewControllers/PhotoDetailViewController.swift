@@ -101,4 +101,53 @@ class PhotoDetailViewController: NSViewController {
         
         ObjectsArrayController.fetchPredicate = predicate
     }
+    @IBOutlet weak var ObjectsTable: NSTableView!
+    @IBOutlet weak var PeopleTable: NSTableView!
+    
+    @IBAction func RemoveObjectOrPerson_OnClick(_ sender: NSButton) {
+        selectedPhoto = (view.window?.windowController as! PhotoDetailWindowController).getPhoto()
+        
+        let objectID = selectedPhoto?.objectID
+        
+        if(ObjectsTable.isAccessibilityFocused()){
+            let object = ObjectsArrayController.selectedObjects[0] as! ItemEntity
+            
+            let records = object.photoRecords
+            
+            var recordToRemove: ItemOnPhotoEntity? = nil
+            for record in records!{
+                if((record as! ItemOnPhotoEntity).photo?.objectID == objectID){
+                    recordToRemove = record as? ItemOnPhotoEntity
+                    break;
+                }
+            }
+            
+            if(recordToRemove == nil){
+                return
+            }
+            
+            object.removeFromPhotoRecords(recordToRemove!)
+            selectedPhoto?.removeFromItemsOnPhoto(recordToRemove!)
+        }else if(PeopleTable.isAccessibilityFocused()){
+            let person = PeopleArrayController.selectedObjects[0] as! PersonEntity
+            
+            let records = person.photoRecords
+            
+            var recordToRemove: PersonOnPhotoEntity? = nil
+            for record in records!{
+                if((record as! PersonOnPhotoEntity).photo?.objectID == objectID){
+                    recordToRemove = record as? PersonOnPhotoEntity
+                    break;
+                }
+            }
+            
+            if(recordToRemove == nil){
+                return
+            }
+            
+            person.removeFromPhotoRecords(recordToRemove!)
+            selectedPhoto?.removeFromPersonsOnPhoto(recordToRemove!)
+        }
+    }
+    
 }
