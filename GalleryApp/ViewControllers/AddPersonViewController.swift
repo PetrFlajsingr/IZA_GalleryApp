@@ -9,7 +9,13 @@
 import Cocoa
 
 class AddPersonViewController: NSViewController {
-
+    @objc var MOC: NSManagedObjectContext {
+        return (NSApplication.shared.delegate as!
+            AppDelegate).persistentContainer.viewContext
+    }
+    
+    @objc var EDI : Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

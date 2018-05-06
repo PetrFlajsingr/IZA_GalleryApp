@@ -72,4 +72,14 @@ class PhotoDetailViewController: NSViewController {
             return
         }
     }
+    
+    var addObjectsWindow: AddObjectPersonWindowController?
+    @IBAction func AddPersonObject_OnClick(_ sender: NSButton) {
+        addObjectsWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddObjectPersonWindow")) as? AddObjectPersonWindowController
+        
+        addObjectsWindow?.setPhoto(photoEntity: selectedPhoto!)
+        
+        addObjectsWindow?.showWindow(self)
+    }
+    
 }

@@ -2168,7 +2168,7 @@ IA
         <!--Window Controller-->
         <scene sceneID="Pdd-O2-cYT">
             <objects>
-                <windowController storyboardIdentifier="AddPersonObjectWindow" id="aMx-KQ-6kz" customClass="AddObjectPersonWindowController" customModule="GalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="AddObjectPersonWindow" id="aMx-KQ-6kz" customClass="AddObjectPersonWindowController" customModule="GalleryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="1BQ-xp-LtJ">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -2332,7 +2332,11 @@ IA
                     </connections>
                 </viewController>
                 <customObject id="SZ8-Xr-twc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController mode="entity" entityName="ItemEntity" automaticallyPreparesContent="YES" id="h2R-OC-dWP"/>
+                <arrayController mode="entity" entityName="ItemEntity" automaticallyPreparesContent="YES" id="h2R-OC-dWP">
+                    <connections>
+                        <binding destination="pfF-qE-rhT" name="managedObjectContext" keyPath="self.MOC" id="Hd7-kG-Igd"/>
+                    </connections>
+                </arrayController>
             </objects>
             <point key="canvasLocation" x="2801" y="1742"/>
         </scene>
@@ -2351,13 +2355,13 @@ IA
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gb-mv-CdF">
-                                            <rect key="frame" x="8" y="15" width="416" height="252"/>
+                                            <rect key="frame" x="8" y="5" width="416" height="262"/>
                                             <clipView key="contentView" id="iaz-o9-scm">
-                                                <rect key="frame" x="1" y="0.0" width="414" height="251"/>
+                                                <rect key="frame" x="1" y="0.0" width="414" height="261"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="dCk-oa-yG2" viewBased="YES" id="4HO-xm-kvj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="228"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="238"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -2458,7 +2462,7 @@ IA
                                         </scrollView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="2Gb-mv-CdF" secondAttribute="bottom" constant="15" id="1zd-G0-XLp"/>
+                                        <constraint firstAttribute="bottom" secondItem="2Gb-mv-CdF" secondAttribute="bottom" constant="5" id="1zd-G0-XLp"/>
                                         <constraint firstItem="2Gb-mv-CdF" firstAttribute="leading" secondItem="ocX-sb-v3J" secondAttribute="leading" constant="8" id="34Q-FN-NzI"/>
                                         <constraint firstItem="2Gb-mv-CdF" firstAttribute="top" secondItem="ocX-sb-v3J" secondAttribute="top" constant="10" id="7zR-YB-2oW"/>
                                         <constraint firstAttribute="trailing" secondItem="2Gb-mv-CdF" secondAttribute="trailing" constant="8" id="bly-kD-Z5C"/>
@@ -2478,7 +2482,11 @@ IA
                     </connections>
                 </viewController>
                 <customObject id="f52-AE-jT2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController mode="entity" entityName="PersonEntity" automaticallyPreparesContent="YES" id="GtC-EG-oSX"/>
+                <arrayController mode="entity" entityName="PersonEntity" automaticallyPreparesContent="YES" id="GtC-EG-oSX">
+                    <connections>
+                        <binding destination="lc1-Yw-BKu" name="managedObjectContext" keyPath="self.MOC" id="OLr-wh-Wem"/>
+                    </connections>
+                </arrayController>
             </objects>
             <point key="canvasLocation" x="2801" y="2114"/>
         </scene>
@@ -2855,6 +2863,9 @@ IA
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="AddPersonObject_OnClick:" target="R05-m5-m9s" id="lT1-o4-s9X"/>
+                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PUX-DQ-2Zg">
                                             <rect key="frame" x="65" y="-1" width="89" height="32"/>
