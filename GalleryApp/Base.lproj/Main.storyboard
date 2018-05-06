@@ -2725,12 +2725,11 @@ IA
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a1e-yN-rDg">
                                 <rect key="frame" x="193" y="145" width="350" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="dkX-z9-Af0"/>
-                                    <constraint firstAttribute="width" constant="350" id="ety-d0-4Ov"/>
+                                    <constraint firstAttribute="height" constant="350" id="wMp-vl-uPv"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="kW2-6P-aF0"/>
                                 <connections>
-                                    <binding destination="Qbd-6m-s3p" name="value" keyPath="selection.imageData" id="bia-fR-xuw">
+                                    <binding destination="4al-O2-4su" name="value" keyPath="selection.imageData" id="n1b-Fv-MlN">
                                         <dictionary key="options">
                                             <string key="NSValueTransformerName">ImageDataDetailValueTransformer</string>
                                         </dictionary>
@@ -2805,7 +2804,7 @@ IA
                                                 </subviews>
                                             </clipView>
                                             <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="9d8-RH-vGT">
-                                                <rect key="frame" x="1" y="193" width="128" height="16"/>
+                                                <rect key="frame" x="1" y="193" width="140" height="16"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="ENo-VU-YCA">
@@ -2887,9 +2886,8 @@ IA
                                                                         <rect key="frame" x="73" y="1" width="65" height="17"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
-                                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3H-bD-f6k">
+                                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="O3H-bD-f6k">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="65" height="17"/>
-                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Nvd-pY-Dop">
                                                                                     <font key="font" metaFont="system"/>
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -2900,6 +2898,11 @@ IA
                                                                                 </connections>
                                                                             </textField>
                                                                         </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="O3H-bD-f6k" firstAttribute="leading" secondItem="JyW-ps-7UD" secondAttribute="leading" constant="2" id="HRm-Yo-XMn"/>
+                                                                            <constraint firstItem="O3H-bD-f6k" firstAttribute="centerY" secondItem="JyW-ps-7UD" secondAttribute="centerY" id="NEH-jA-fNR"/>
+                                                                            <constraint firstItem="O3H-bD-f6k" firstAttribute="centerX" secondItem="JyW-ps-7UD" secondAttribute="centerX" id="dKD-WI-8Hs"/>
+                                                                        </constraints>
                                                                         <connections>
                                                                             <outlet property="textField" destination="O3H-bD-f6k" id="cKN-QD-Vue"/>
                                                                         </connections>
@@ -2964,6 +2967,9 @@ IA
                                         <constraint firstItem="I9x-NA-UM8" firstAttribute="leading" secondItem="ZRg-7V-gqe" secondAttribute="leading" constant="6" id="xFC-jy-sFq"/>
                                     </constraints>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="huv-nT-E5a"/>
+                                </constraints>
                             </box>
                             <box title="Information" translatesAutoresizingMaskIntoConstraints="NO" id="hyO-je-dqY">
                                 <rect key="frame" x="5" y="6" width="186" height="489"/>
@@ -3015,7 +3021,7 @@ IA
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="Qbd-6m-s3p" name="value" keyPath="selection.title" id="IJb-8d-h4P"/>
+                                                <binding destination="4al-O2-4su" name="value" keyPath="selection.title" id="YAP-Az-bab"/>
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-hF-r6a">
@@ -3027,7 +3033,7 @@ IA
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="Qbd-6m-s3p" name="value" keyPath="selection.creationDate" id="z0G-mg-UWO">
+                                                <binding destination="4al-O2-4su" name="value" keyPath="selection.creationDate" id="8vL-jE-rUU">
                                                     <dictionary key="options">
                                                         <string key="NSValueTransformerName">DateValueTransformer</string>
                                                     </dictionary>
@@ -3043,7 +3049,7 @@ IA
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="Qbd-6m-s3p" name="value" keyPath="selection.format" id="fni-64-TBX"/>
+                                                <binding destination="4al-O2-4su" name="value" keyPath="selection.format" id="PT4-Qk-63Z"/>
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RXp-Mg-HiY">
@@ -3055,7 +3061,7 @@ IA
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="Qbd-6m-s3p" name="value" keyPath="selection.resolution" id="hhY-H1-1de">
+                                                <binding destination="4al-O2-4su" name="value" keyPath="selection.resolution" id="TJl-U8-kQv">
                                                     <dictionary key="options">
                                                         <string key="NSValueTransformerName">ResolutionValueTransformer</string>
                                                     </dictionary>
@@ -3080,7 +3086,7 @@ IA
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="Qbd-6m-s3p" name="value" keyPath="selection.desc" id="5ea-m3-KV9"/>
+                                                <binding destination="4al-O2-4su" name="value" keyPath="selection.desc" id="1Tb-qd-mY3"/>
                                             </connections>
                                         </textField>
                                     </subviews>
@@ -3094,9 +3100,8 @@ IA
                                     <constraint firstAttribute="width" constant="180" id="fB3-dL-h6Z"/>
                                 </constraints>
                             </box>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PON-yJ-dWr">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PON-yJ-dWr">
                                 <rect key="frame" x="294" y="3" width="148" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Save image to file" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Iud-75-eNl">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -3110,9 +3115,11 @@ IA
                             <constraint firstAttribute="bottom" secondItem="a38-5b-K1s" secondAttribute="bottom" constant="10" id="03t-aY-x7u"/>
                             <constraint firstAttribute="trailing" secondItem="a38-5b-K1s" secondAttribute="trailing" constant="8" id="4KQ-EO-juh"/>
                             <constraint firstItem="a38-5b-K1s" firstAttribute="top" secondItem="wv2-1a-56D" secondAttribute="top" constant="5" id="KFl-Ck-Pm6"/>
-                            <constraint firstItem="a1e-yN-rDg" firstAttribute="top" secondItem="a38-5b-K1s" secondAttribute="top" id="NZE-ha-Gqh"/>
-                            <constraint firstItem="a1e-yN-rDg" firstAttribute="leading" secondItem="hyO-je-dqY" secondAttribute="trailing" constant="5" id="ePP-sM-02s"/>
-                            <constraint firstItem="a38-5b-K1s" firstAttribute="leading" secondItem="a1e-yN-rDg" secondAttribute="trailing" constant="5" id="hNE-Nz-g6f"/>
+                            <constraint firstItem="a1e-yN-rDg" firstAttribute="top" secondItem="a38-5b-K1s" secondAttribute="top" id="Sx3-uU-w4a"/>
+                            <constraint firstItem="a38-5b-K1s" firstAttribute="leading" secondItem="a1e-yN-rDg" secondAttribute="trailing" constant="5" id="UaA-Ln-Sfe"/>
+                            <constraint firstItem="PON-yJ-dWr" firstAttribute="bottom" secondItem="a38-5b-K1s" secondAttribute="bottom" id="adi-Xi-h4D"/>
+                            <constraint firstItem="a1e-yN-rDg" firstAttribute="leading" secondItem="hyO-je-dqY" secondAttribute="trailing" constant="5" id="be0-Ui-H4n"/>
+                            <constraint firstItem="a1e-yN-rDg" firstAttribute="centerX" secondItem="PON-yJ-dWr" secondAttribute="centerX" id="mIN-mi-ChE"/>
                             <constraint firstItem="hyO-je-dqY" firstAttribute="leading" secondItem="wv2-1a-56D" secondAttribute="leading" constant="8" id="pr9-3a-fW1"/>
                             <constraint firstAttribute="bottom" secondItem="hyO-je-dqY" secondAttribute="bottom" constant="10" id="rDf-3y-1l5"/>
                             <constraint firstItem="hyO-je-dqY" firstAttribute="top" secondItem="wv2-1a-56D" secondAttribute="top" constant="5" id="vMl-jg-h53"/>
@@ -3123,16 +3130,11 @@ IA
                         <outlet property="ObjectsTable" destination="cfq-P0-TsA" id="13Z-Pd-SRt"/>
                         <outlet property="PeopleArrayController" destination="Eod-qm-Fa1" id="tGA-oS-naw"/>
                         <outlet property="PeopleTable" destination="3qD-v3-grX" id="EIY-jm-ovf"/>
+                        <outlet property="PhotoArrayController" destination="4al-O2-4su" id="VYZ-WD-hdg"/>
                         <outlet property="PhotoImageView" destination="a1e-yN-rDg" id="vHU-R3-TQ6"/>
-                        <outlet property="PhotoObjectController" destination="Qbd-6m-s3p" id="Wig-Jv-J6k"/>
                     </connections>
                 </viewController>
                 <customObject id="Npg-tZ-RRz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <objectController mode="entity" entityName="PhotoEntity" automaticallyPreparesContent="YES" id="Qbd-6m-s3p">
-                    <connections>
-                        <binding destination="R05-m5-m9s" name="managedObjectContext" keyPath="self.MOC" id="jvz-9X-cEZ"/>
-                    </connections>
-                </objectController>
                 <arrayController mode="entity" entityName="PersonEntity" automaticallyPreparesContent="YES" id="Eod-qm-Fa1">
                     <connections>
                         <binding destination="R05-m5-m9s" name="managedObjectContext" keyPath="self.MOC" id="Dqx-Lh-M0v"/>
@@ -3141,6 +3143,11 @@ IA
                 <arrayController mode="entity" entityName="ItemEntity" automaticallyPreparesContent="YES" id="hE8-MO-IMY">
                     <connections>
                         <binding destination="R05-m5-m9s" name="managedObjectContext" keyPath="self.MOC" id="SdP-vE-Z6q"/>
+                    </connections>
+                </arrayController>
+                <arrayController mode="entity" entityName="PhotoEntity" automaticallyPreparesContent="YES" id="4al-O2-4su">
+                    <connections>
+                        <binding destination="R05-m5-m9s" name="managedObjectContext" keyPath="self.MOC" id="Udt-d3-XHB"/>
                     </connections>
                 </arrayController>
             </objects>

@@ -9,7 +9,7 @@
 import Cocoa
 
 class PhotoDetailViewController: NSViewController {
-    @IBOutlet var PhotoObjectController: NSObjectController!
+    @IBOutlet var PhotoArrayController: NSArrayController!
     
     @objc var MOC: NSManagedObjectContext {
         return (NSApplication.shared.delegate as!
@@ -29,7 +29,10 @@ class PhotoDetailViewController: NSViewController {
         let objectID = selectedPhoto?.objectID
         
         let predicate = NSPredicate(format: "SELF = %@", objectID!)
-        PhotoObjectController.fetchPredicate = predicate
+        PhotoArrayController.fetchPredicate = predicate
+        
+        let options = NSKeyValueObservingOptions()
+        PhotoArrayController.addObserver(self, forKeyPath: "selection", options: options, context: nil)
         
         setPredicateForPeopleArrayController(photoID: objectID!)
         
@@ -38,9 +41,18 @@ class PhotoDetailViewController: NSViewController {
         view.window?.title = "Photo: " + (selectedPhoto?.title)!
     }
     
+    // spinavy hack, ale bohužel jsem nenašel jiný způsob jak zabránit změně selection při úpravě jeho property...
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if(keyPath == "selection"){
+            PhotoArrayController.setSelectedObjects([selectedPhoto!])
+            PhotoArrayController.setSelectionIndex(0)
+        }
+        super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+    }
+    
     @IBOutlet weak var PhotoImageView: NSImageView!
     @IBAction func SaveToFile_OnClick(_ sender: NSButton) {
-        let photoEntity = PhotoObjectController.selectedObjects[0] as! PhotoEntity
+        let photoEntity = PhotoArrayController.selectedObjects[0] as! PhotoEntity
         
         let dialog = NSSavePanel();
         
