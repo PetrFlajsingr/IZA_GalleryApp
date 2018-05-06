@@ -31,6 +31,10 @@ class PhotoDetailViewController: NSViewController {
         let predicate = NSPredicate(format: "SELF = %@", objectID!)
         PhotoObjectController.fetchPredicate = predicate
         
+        setPredicateForPeopleArrayController(photoID: objectID!)
+        
+        setPredicateForObjectArrayController(photoID: objectID!)
+        
         view.window?.title = "Photo: " + (selectedPhoto?.title)!
     }
     
@@ -82,4 +86,19 @@ class PhotoDetailViewController: NSViewController {
         addObjectsWindow?.showWindow(self)
     }
     
+    @IBOutlet var PeopleArrayController: NSArrayController!
+    
+    func setPredicateForPeopleArrayController(photoID: NSManagedObjectID){
+        let predicate = NSPredicate(format: "SUBQUERY(photoRecords, $record, $record.photo = %@).@count <> 0", photoID)
+        
+        PeopleArrayController.fetchPredicate = predicate
+    }
+    
+    @IBOutlet var ObjectsArrayController: NSArrayController!
+    
+    func setPredicateForObjectArrayController(photoID: NSManagedObjectID){
+        let predicate = NSPredicate(format: "SUBQUERY(photoRecords, $record, $record.photo = %@).@count <> 0", photoID)
+        
+        ObjectsArrayController.fetchPredicate = predicate
+    }
 }
