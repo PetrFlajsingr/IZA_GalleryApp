@@ -22,6 +22,8 @@ class AlbumPhotoViewController: NSViewController {
     @IBAction func AddPhoto_OnClick(_ sender: NSButton) {
         addPhotosWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AddPhotoToAlbumWindow")) as? AddPhotoToAlbumWindowController
         
+        addPhotosWindow?.setAlbum(albumEntity: selectedAlbum!)
+        
         addPhotosWindow?.showWindow(self)
     }
     
