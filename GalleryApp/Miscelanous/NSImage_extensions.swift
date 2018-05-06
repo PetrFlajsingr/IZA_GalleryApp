@@ -9,6 +9,9 @@
 import Foundation
 import Cocoa
 
+/*
+ Extensions for NSImage to save using various formats as well as using PhotoEntity as data source.
+ */
 extension NSImage{
     var pngData: Data? {
         guard let tiffRepresentation = tiffRepresentation, let bitmapImage = NSBitmapImageRep(data: tiffRepresentation) else { return nil }

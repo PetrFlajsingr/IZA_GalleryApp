@@ -27,6 +27,9 @@ class AlbumListViewController: NSViewController {
     }
     
     var albumPhotoWindow : AlbumPhotoWindow?
+    /*
+     Creates and shows window containing all photos in album
+     */
     @IBAction func AlbumTable_OnDoubleClick(_ sender: NSTableView) {
         albumPhotoWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AlbumPhotoWindow")) as? AlbumPhotoWindow
         

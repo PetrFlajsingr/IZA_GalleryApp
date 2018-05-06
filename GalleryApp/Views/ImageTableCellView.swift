@@ -8,6 +8,9 @@
 
 import Cocoa
 
+/*
+ Custom cell for table with images
+ */
 class ImageTableCellView: NSTableCellView {
 
     override func draw(_ dirtyRect: NSRect) {

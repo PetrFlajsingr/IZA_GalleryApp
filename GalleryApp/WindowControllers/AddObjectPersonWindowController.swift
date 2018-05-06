@@ -9,7 +9,6 @@
 import Cocoa
 
 class AddObjectPersonWindowController: NSWindowController {
-
     override func windowDidLoad() {
         super.windowDidLoad()
     }

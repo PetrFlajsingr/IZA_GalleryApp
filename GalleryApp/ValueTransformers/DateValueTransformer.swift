@@ -8,6 +8,9 @@
 
 import Foundation
 
+/*
+ Transforms Date/NSDate to format "dd.MM.yyyy" and back, returns current date in reverse transform if value is not correct format
+ */
 class DateValueTransformer: ValueTransformer {
     override class func transformedValueClass() -> AnyClass {
         return NSString.self

@@ -21,7 +21,6 @@ class ItemsViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
     override func viewWillAppear() {
@@ -50,6 +49,9 @@ class ItemsViewController: NSViewController {
     }
     
     var photoDetailWindow: PhotoDetailWindowController?
+    /*
+     Creates and shows window containing photo detail
+     */
     @IBAction func Photos_OnDoubleClick(_ sender: NSTableView) {
         photoDetailWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PhotoDetailWindow")) as? PhotoDetailWindowController
         

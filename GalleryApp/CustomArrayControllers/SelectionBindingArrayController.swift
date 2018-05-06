@@ -8,6 +8,9 @@
 
 import Cocoa
 
+/*
+An attempt to create a bindable selected object from NSArrayController - doesn't update tho...
+*/
 class SelectionBindingArrayController: NSArrayController {
     @objc var selectedObject: Any!{
         get {

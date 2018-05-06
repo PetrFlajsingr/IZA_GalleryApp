@@ -19,7 +19,6 @@ class AddPhotoToAlbumViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
     override func viewWillAppear() {
@@ -38,8 +37,6 @@ class AddPhotoToAlbumViewController: NSViewController {
         let photoToAdd = PhotosArrayController.selectedObjects[0] as! PhotoEntity
         
         selectedAlbum?.addToPhotos(photoToAdd)
-        photoToAdd.addToAlbums(selectedAlbum!)
-        
 
         view.window?.windowController?.close()
         

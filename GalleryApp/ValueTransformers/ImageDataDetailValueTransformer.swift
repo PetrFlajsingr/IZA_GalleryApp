@@ -8,6 +8,9 @@
 
 import Cocoa
 
+/*
+ Transforms raw image data from Core Data to NSImage to fit PhotoDetail
+ */
 class ImageDataDetailValueTransformer: ValueTransformer {
     static let sizeLimit : NSSize = {
         var size = NSSize()

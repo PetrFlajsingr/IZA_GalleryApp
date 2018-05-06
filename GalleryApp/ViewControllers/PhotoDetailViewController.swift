@@ -42,6 +42,7 @@ class PhotoDetailViewController: NSViewController {
     }
     
     // spinavy hack, ale bohužel jsem nenašel jiný způsob jak zabránit změně selection při úpravě jeho property...
+    // i když se toto chování neprojevilo nikde jinde
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if(keyPath == "selection"){
             PhotoArrayController.setSelectedObjects([selectedPhoto!])
@@ -139,9 +140,6 @@ class PhotoDetailViewController: NSViewController {
             }
             
             MOC.delete(recordToRemove!)
-            
-            //object.removeFromPhotoRecords(recordToRemove!)
-            //selectedPhoto?.removeFromItemsOnPhoto(recordToRemove!)
         }else if(PeopleTable.isAccessibilityFocused()){
             let person = PeopleArrayController.selectedObjects[0] as! PersonEntity
             
@@ -159,9 +157,6 @@ class PhotoDetailViewController: NSViewController {
                 return
             }
             MOC.delete(recordToRemove!)
-            
-            //person.removeFromPhotoRecords(recordToRemove!)
-            //selectedPhoto?.removeFromPersonsOnPhoto(recordToRemove!)
         }
     }
     

@@ -18,7 +18,6 @@ class AddObjectViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
     @IBOutlet var ObjectArrayController: NSArrayController!

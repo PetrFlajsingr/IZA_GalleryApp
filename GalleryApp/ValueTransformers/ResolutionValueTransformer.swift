@@ -8,6 +8,9 @@
 
 import Cocoa
 
+/*
+ Transforms Core Data resolution entity to String
+ */
 class ResolutionValueTransformer: ValueTransformer {
     override class func transformedValueClass() -> AnyClass {
         return NSString.self

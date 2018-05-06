@@ -10,6 +10,9 @@ import Foundation
 import Cocoa
 
 class ImageUtils{
+    /*
+     Scales image to fit required limits
+     */
     static func scaleImageToFitItem(image: NSImage, sizeLimits: NSSize) -> NSImage {
         
         var widthRatio: Float = 0.0
@@ -25,7 +28,6 @@ class ImageUtils{
         
         let ratio = (widthRatio >= heightRatio ? heightRatio : widthRatio)
         
-        // Calculate new size based on the ratio
         let newWidth = imageWidth * ratio
         let newHeight = imageHeight * ratio
         

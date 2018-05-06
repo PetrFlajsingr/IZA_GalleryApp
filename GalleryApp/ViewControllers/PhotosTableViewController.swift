@@ -16,15 +16,15 @@ class PhotosTableViewController: NSViewController {
     @objc var EDI : Bool = true
     
     @IBOutlet var PhotoArrayController: NSArrayController!
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
     var photoDetailWindow : PhotoDetailWindowController?
+    /*
+     Creates and shows window containing photo detail
+     */
     @IBAction func PhotoTable_OnDoubleClick(_ sender: NSTableView) {       
         photoDetailWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PhotoDetailWindow")) as? PhotoDetailWindowController
         
