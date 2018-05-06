@@ -36,11 +36,6 @@ class ItemsViewController: NSViewController {
     
     @IBOutlet var PhotosArrayController: NSArrayController!
     @IBAction func Objects_SelectionChanged(_ sender: NSTableView) {
-        if(ItemsArrayController.selectedObjects.count != 1){
-            setPredicateForPhotosArrayControllerToShowNothing()
-            return
-        }
-        
         let selectedItem = ItemsArrayController.selectedObjects[0] as! ItemEntity
         
         let objectID = selectedItem.objectID
@@ -48,15 +43,18 @@ class ItemsViewController: NSViewController {
         setPredicateForPhotosArrayController(itemID: objectID)
     }
     
-    func setPredicateForPhotosArrayControllerToShowNothing(){
-        let predicate = NSPredicate(format: "SELF = _")
-        
-        PhotosArrayController.fetchPredicate = predicate
-    }
-    
     func setPredicateForPhotosArrayController(itemID: NSManagedObjectID){
         let predicate = NSPredicate(format: "SUBQUERY(itemsOnPhoto, $itemOnPhoto, $itemOnPhoto.item = %@).@count <> 0", itemID)
         
         PhotosArrayController.fetchPredicate = predicate
+    }
+    
+    var photoDetailWindow: PhotoDetailWindowController?
+    @IBAction func Photos_OnDoubleClick(_ sender: NSTableView) {
+        photoDetailWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PhotoDetailWindow")) as? PhotoDetailWindowController
+        
+        photoDetailWindow?.setPhoto(photoEntity: (PhotosArrayController.selectedObjects[0] as? PhotoEntity)!)
+        
+        photoDetailWindow?.showWindow(self)
     }
 }

@@ -34,12 +34,7 @@ class PeopleViewController: NSViewController {
         setPredicateForPhotosArrayController(personID: objectID)
     }
     
-    @IBAction func People_OnSelectionChanged(_ sender: NSTableView) {
-        if(PeopleArrayController.selectedObjects.count != 1){
-            setPredicateForPhotosArrayController(personID: NSManagedObjectID())
-            return
-        }
-        
+    @IBAction func People_OnSelectionChanged(_ sender: NSTableView) {        
         let selectedPerson = PeopleArrayController.selectedObjects[0] as! PersonEntity
         
         let objectID = selectedPerson.objectID
@@ -52,5 +47,14 @@ class PeopleViewController: NSViewController {
         let predicate = NSPredicate(format: "SUBQUERY(personsOnPhoto, $personOnPhoto, $personOnPhoto.person = %@).@count <> 0", personID)
         
         PhotosArrayController.fetchPredicate = predicate
+    }
+    
+    var photoDetailWindow: PhotoDetailWindowController?
+    @IBAction func Photos_OnDoubleClick(_ sender: NSTableView) {
+        photoDetailWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PhotoDetailWindow")) as? PhotoDetailWindowController
+        
+        photoDetailWindow?.setPhoto(photoEntity: (PhotosArrayController.selectedObjects[0] as? PhotoEntity)!)
+        
+        photoDetailWindow?.showWindow(self)
     }
 }

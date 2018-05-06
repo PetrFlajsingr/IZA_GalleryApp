@@ -882,7 +882,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="363" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="wH7-2q-zsm" viewBased="YES" id="Efj-U6-x9v">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="wH7-2q-zsm" viewBased="YES" id="Efj-U6-x9v">
                                                         <rect key="frame" x="0.0" y="0.0" width="363" height="421"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -1143,7 +1143,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="440" height="241"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="100" headerView="fig-mf-a34" viewBased="YES" id="pe5-bJ-tbt" userLabel="PhotoTable">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="100" headerView="fig-mf-a34" viewBased="YES" id="pe5-bJ-tbt" userLabel="PhotoTable">
                                                         <rect key="frame" x="0.0" y="0.0" width="440" height="218"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -1317,7 +1317,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="660" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="100" headerView="oMh-AA-3C5" viewBased="YES" id="o62-oW-dKj" userLabel="PhotoTable">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="100" headerView="oMh-AA-3C5" viewBased="YES" id="o62-oW-dKj" userLabel="PhotoTable">
                                                         <rect key="frame" x="0.0" y="0.0" width="660" height="421"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -1683,7 +1683,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="168" height="471"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="oFQ-qd-5fk" viewBased="YES" id="HjV-0O-KKY">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="oFQ-qd-5fk" viewBased="YES" id="HjV-0O-KKY">
                                                         <rect key="frame" x="0.0" y="0.0" width="168" height="448"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -1732,6 +1732,7 @@ IA
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
+                                                            <action selector="Photos_OnDoubleClick:" target="E13-2b-7uu" id="zzu-64-NlP"/>
                                                             <binding destination="7IB-SF-a0W" name="content" keyPath="arrangedObjects" id="EXF-hx-YPx"/>
                                                             <binding destination="7IB-SF-a0W" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="EXF-hx-YPx" id="wHd-fB-u9y"/>
                                                         </connections>
@@ -2071,7 +2072,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="172" height="471"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="UgO-Da-rPu" viewBased="YES" id="q7D-ly-chj">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="UgO-Da-rPu" viewBased="YES" id="q7D-ly-chj">
                                                         <rect key="frame" x="0.0" y="0.0" width="172" height="448"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -2120,6 +2121,7 @@ IA
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
+                                                            <action trigger="doubleAction" selector="Photos_OnDoubleClick:" target="bdX-px-xAy" id="sQv-7t-gGo"/>
                                                             <binding destination="jZA-Ep-kD3" name="content" keyPath="arrangedObjects" id="Plo-9J-aC5"/>
                                                             <binding destination="jZA-Ep-kD3" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="Plo-9J-aC5" id="t4o-jY-ovT"/>
                                                         </connections>
@@ -2250,7 +2252,7 @@ IA
                                                         <rect key="frame" x="1" y="0.0" width="410" height="262"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
-                                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="pW9-fJ-OWV" viewBased="YES" id="zZf-VZ-920">
+                                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="pW9-fJ-OWV" viewBased="YES" id="zZf-VZ-920">
                                                                 <rect key="frame" x="0.0" y="0.0" width="410" height="239"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -2377,7 +2379,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="414" height="261"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="dCk-oa-yG2" viewBased="YES" id="4HO-xm-kvj">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="dCk-oa-yG2" viewBased="YES" id="4HO-xm-kvj">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="238"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -2548,7 +2550,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="660" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="100" headerView="LQz-9f-xVP" viewBased="YES" id="aw0-2g-9ND" userLabel="PhotoTable">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="100" headerView="LQz-9f-xVP" viewBased="YES" id="aw0-2g-9ND" userLabel="PhotoTable">
                                                         <rect key="frame" x="0.0" y="0.0" width="660" height="421"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -2741,13 +2743,13 @@ IA
                                     <rect key="frame" x="1" y="1" width="154" height="483"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="212" horizontalPageScroll="10" verticalLineScroll="212" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0k-iF-aH7">
+                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0k-iF-aH7">
                                             <rect key="frame" x="6" y="45" width="142" height="210"/>
                                             <clipView key="contentView" id="Mfw-MC-GQr">
                                                 <rect key="frame" x="1" y="0.0" width="140" height="209"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="210" rowSizeStyle="automatic" headerView="2r5-Nk-cQO" viewBased="YES" id="cfq-P0-TsA">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="2r5-Nk-cQO" viewBased="YES" id="cfq-P0-TsA">
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="186"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -2814,7 +2816,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="140" height="217"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="lPl-3v-P8A" viewBased="YES" id="3qD-v3-grX">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="lPl-3v-P8A" viewBased="YES" id="3qD-v3-grX">
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="194"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>

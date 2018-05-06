@@ -32,8 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    func applicationWillTerminate(_ aNotification: Notification) {        
     }
 
     // MARK: - Core Data stack
