@@ -32,4 +32,18 @@ class AddPersonViewController: NSViewController {
         let predicate = NSPredicate(format: "SUBQUERY(photoRecords, $photoRecord, $photoRecord.photo = %@).@count = 0", objectID!)
         PersonArrayController.fetchPredicate = predicate
     }
+    @IBAction func AddPerson_DoubleClick(_ sender: NSTableView) {
+        let personOnPhoto = NSEntityDescription.insertNewObject(forEntityName: "PersonOnPhotoEntity", into: MOC) as! PersonOnPhotoEntity
+        
+        let position = NSEntityDescription.insertNewObject(forEntityName: "PositionEntity", into: MOC) as! PositionEntity
+        
+        position.positionX = 0.0
+        position.positionY = 0.0
+        
+        personOnPhoto.person = (PersonArrayController.selectedObjects[0] as! PersonEntity)
+        personOnPhoto.photo = selectedPhoto
+        personOnPhoto.position = position
+        
+        self.view.window?.close()
+    }
 }

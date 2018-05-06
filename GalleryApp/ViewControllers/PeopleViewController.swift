@@ -24,4 +24,33 @@ class PeopleViewController: NSViewController {
         // Do view setup here.
     }
     
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        
+        let selectedPerson = PeopleArrayController.selectedObjects[0] as! PersonEntity
+        
+        let objectID = selectedPerson.objectID
+        
+        setPredicateForPhotosArrayController(personID: objectID)
+    }
+    
+    @IBAction func People_OnSelectionChanged(_ sender: NSTableView) {
+        if(PeopleArrayController.selectedObjects.count != 1){
+            setPredicateForPhotosArrayController(personID: NSManagedObjectID())
+            return
+        }
+        
+        let selectedPerson = PeopleArrayController.selectedObjects[0] as! PersonEntity
+        
+        let objectID = selectedPerson.objectID
+        
+        setPredicateForPhotosArrayController(personID: objectID)
+    }
+    
+    @IBOutlet var PhotosArrayController: NSArrayController!
+    func setPredicateForPhotosArrayController(personID: NSManagedObjectID){
+        let predicate = NSPredicate(format: "SUBQUERY(personsOnPhoto, $personOnPhoto, $personOnPhoto.person = %@).@count <> 0", personID)
+        
+        PhotosArrayController.fetchPredicate = predicate
+    }
 }

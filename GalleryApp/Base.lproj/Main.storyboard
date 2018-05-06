@@ -1552,7 +1552,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="277" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="VD3-hP-4Ej" viewBased="YES" id="wSq-Aw-KxK">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="VD3-hP-4Ej" viewBased="YES" id="wSq-Aw-KxK">
                                                         <rect key="frame" x="0.0" y="0.0" width="277" height="421"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -1601,6 +1601,7 @@ IA
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
+                                                            <action selector="Objects_SelectionChanged:" target="E13-2b-7uu" id="dnx-Ug-hYu"/>
                                                             <binding destination="BUB-4z-2cK" name="content" keyPath="arrangedObjects" id="s0k-Ng-yzP"/>
                                                             <binding destination="BUB-4z-2cK" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="s0k-Ng-yzP" id="Kmb-zR-H8L"/>
                                                         </connections>
@@ -1714,7 +1715,7 @@ IA
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
                                                                                 <connections>
-                                                                                    <binding destination="SzN-uY-xDv" name="value" keyPath="objectValue.photo.title" id="ytZ-jy-mF4"/>
+                                                                                    <binding destination="SzN-uY-xDv" name="value" keyPath="objectValue.title" id="LIt-us-Hkz"/>
                                                                                 </connections>
                                                                             </textField>
                                                                         </subviews>
@@ -1731,7 +1732,8 @@ IA
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
-                                                            <binding destination="BUB-4z-2cK" name="content" keyPath="selection.photoRecords" id="f7I-UL-K56"/>
+                                                            <binding destination="7IB-SF-a0W" name="content" keyPath="arrangedObjects" id="EXF-hx-YPx"/>
+                                                            <binding destination="7IB-SF-a0W" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="EXF-hx-YPx" id="wHd-fB-u9y"/>
                                                         </connections>
                                                     </tableView>
                                                 </subviews>
@@ -1776,13 +1778,19 @@ IA
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ItemsArrayController" destination="BUB-4z-2cK" id="gsS-Bm-LK6"/>
+                        <outlet property="ItemsArrayController" destination="BUB-4z-2cK" id="4vU-iU-qoI"/>
+                        <outlet property="PhotosArrayController" destination="7IB-SF-a0W" id="1iG-zg-fmp"/>
                     </connections>
                 </viewController>
                 <customObject id="PJE-EZ-LQZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController mode="entity" entityName="ItemEntity" automaticallyPreparesContent="YES" id="BUB-4z-2cK">
+                <arrayController mode="entity" entityName="ItemEntity" automaticallyPreparesContent="YES" id="BUB-4z-2cK" customClass="SelectionBindingArrayController" customModule="GalleryApp" customModuleProvider="target">
                     <connections>
                         <binding destination="E13-2b-7uu" name="managedObjectContext" keyPath="self.MOC" id="Ibi-ef-GQZ"/>
+                    </connections>
+                </arrayController>
+                <arrayController mode="entity" entityName="PhotoEntity" automaticallyPreparesContent="YES" id="7IB-SF-a0W" userLabel="PhotosArrayController">
+                    <connections>
+                        <binding destination="E13-2b-7uu" name="managedObjectContext" keyPath="self.MOC" id="qWc-iw-ymg"/>
                     </connections>
                 </arrayController>
             </objects>
@@ -1883,7 +1891,7 @@ IA
                                                 <rect key="frame" x="1" y="0.0" width="277" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="uGS-ct-ysK" viewBased="YES" id="ccX-Mz-DPD">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="uGS-ct-ysK" viewBased="YES" id="ccX-Mz-DPD">
                                                         <rect key="frame" x="0.0" y="0.0" width="277" height="421"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -1972,6 +1980,7 @@ IA
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
+                                                            <action selector="People_OnSelectionChanged:" target="bdX-px-xAy" id="Ewo-EU-7At"/>
                                                             <binding destination="IK5-vh-MgP" name="content" keyPath="arrangedObjects" id="2nr-uL-rdR"/>
                                                             <binding destination="IK5-vh-MgP" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="2nr-uL-rdR" id="XJS-v1-YMb"/>
                                                         </connections>
@@ -2094,7 +2103,7 @@ IA
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
                                                                                 <connections>
-                                                                                    <binding destination="Nj1-9m-Qg6" name="value" keyPath="objectValue.photo.title" id="sn5-MG-VuB"/>
+                                                                                    <binding destination="Nj1-9m-Qg6" name="value" keyPath="objectValue.title" id="NS3-6u-W50"/>
                                                                                 </connections>
                                                                             </textField>
                                                                         </subviews>
@@ -2111,7 +2120,8 @@ IA
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
-                                                            <binding destination="IK5-vh-MgP" name="content" keyPath="selection.photoRecords" id="GNH-mo-JNd"/>
+                                                            <binding destination="jZA-Ep-kD3" name="content" keyPath="arrangedObjects" id="Plo-9J-aC5"/>
+                                                            <binding destination="jZA-Ep-kD3" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="Plo-9J-aC5" id="t4o-jY-ovT"/>
                                                         </connections>
                                                     </tableView>
                                                 </subviews>
@@ -2154,12 +2164,18 @@ IA
                     </view>
                     <connections>
                         <outlet property="PeopleArrayController" destination="IK5-vh-MgP" id="wbl-x0-Zh7"/>
+                        <outlet property="PhotosArrayController" destination="jZA-Ep-kD3" id="XVY-wK-mwz"/>
                     </connections>
                 </viewController>
                 <customObject id="T1t-Lb-xEI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController mode="entity" entityName="PersonEntity" automaticallyPreparesContent="YES" id="IK5-vh-MgP" userLabel="PeopleArrayController">
                     <connections>
                         <binding destination="bdX-px-xAy" name="managedObjectContext" keyPath="self.MOC" id="qLw-Ny-QRq"/>
+                    </connections>
+                </arrayController>
+                <arrayController mode="entity" entityName="PhotoEntity" automaticallyPreparesContent="YES" id="jZA-Ep-kD3" userLabel="PhotosArrayController">
+                    <connections>
+                        <binding destination="bdX-px-xAy" name="managedObjectContext" keyPath="self.MOC" id="jo2-rn-m7P"/>
                     </connections>
                 </arrayController>
             </objects>
@@ -2283,6 +2299,7 @@ IA
                                                                     </tableColumn>
                                                                 </tableColumns>
                                                                 <connections>
+                                                                    <action trigger="doubleAction" selector="AddObject_DoubleClick:" target="pfF-qE-rhT" id="KGV-WT-ngl"/>
                                                                     <binding destination="h2R-OC-dWP" name="content" keyPath="arrangedObjects" id="ib7-L0-SGo"/>
                                                                     <binding destination="h2R-OC-dWP" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="ib7-L0-SGo" id="rqf-uU-zaY"/>
                                                                 </connections>
@@ -2441,6 +2458,7 @@ IA
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
+                                                            <action trigger="doubleAction" selector="AddPerson_DoubleClick:" target="lc1-Yw-BKu" id="amn-27-Fe9"/>
                                                             <binding destination="GtC-EG-oSX" name="content" keyPath="arrangedObjects" id="SA3-sh-3dM"/>
                                                             <binding destination="GtC-EG-oSX" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="SA3-sh-3dM" id="jSC-hx-P43"/>
                                                         </connections>

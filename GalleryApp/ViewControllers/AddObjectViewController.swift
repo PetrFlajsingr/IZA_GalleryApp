@@ -32,4 +32,20 @@ class AddObjectViewController: NSViewController {
         let predicate = NSPredicate(format: "SUBQUERY(photoRecords, $photoRecord, $photoRecord.photo = %@).@count = 0", objectID!)
         ObjectArrayController.fetchPredicate = predicate
     }
+    
+    
+    @IBAction func AddObject_DoubleClick(_ sender: NSTableView) {
+        let itemOnPhoto = NSEntityDescription.insertNewObject(forEntityName: "ItemOnPhotoEntity", into: MOC) as! ItemOnPhotoEntity
+        
+        let position = NSEntityDescription.insertNewObject(forEntityName: "PositionEntity", into: MOC) as! PositionEntity
+        
+        position.positionX = 0.0
+        position.positionY = 0.0
+        
+        itemOnPhoto.item = (ObjectArrayController.selectedObjects[0] as! ItemEntity)
+        itemOnPhoto.photo = selectedPhoto
+        itemOnPhoto.position = position
+        
+        self.view.window?.close()
+    }
 }

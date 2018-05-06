@@ -13,6 +13,7 @@
 		4B6CD286209CE14B00B81381 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CD285209CE14B00B81381 /* PhotoDetailViewController.swift */; };
 		4B6CD288209CE2EC00B81381 /* PhotoDetailWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CD287209CE2EC00B81381 /* PhotoDetailWindowController.swift */; };
 		4B6CD28A209CE39E00B81381 /* ResolutionValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CD289209CE39E00B81381 /* ResolutionValueTransformer.swift */; };
+		4B6EF199209EEBB60082DECB /* SelectionBindingArrayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6EF198209EEBB60082DECB /* SelectionBindingArrayController.swift */; };
 		4B8BEF66209E154800E2117E /* NSImage_extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BEF65209E154800E2117E /* NSImage_extensions.swift */; };
 		4B8BEF6F209E242A00E2117E /* AddObjectPersonWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BEF6E209E242A00E2117E /* AddObjectPersonWindowController.swift */; };
 		4B8BEF71209E245500E2117E /* AddObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8BEF70209E245500E2117E /* AddObjectViewController.swift */; };
@@ -77,6 +78,7 @@
 		4B6CD285209CE14B00B81381 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		4B6CD287209CE2EC00B81381 /* PhotoDetailWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailWindowController.swift; sourceTree = "<group>"; };
 		4B6CD289209CE39E00B81381 /* ResolutionValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionValueTransformer.swift; sourceTree = "<group>"; };
+		4B6EF198209EEBB60082DECB /* SelectionBindingArrayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionBindingArrayController.swift; sourceTree = "<group>"; };
 		4B8BEF65209E154800E2117E /* NSImage_extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage_extensions.swift; sourceTree = "<group>"; };
 		4B8BEF6E209E242A00E2117E /* AddObjectPersonWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObjectPersonWindowController.swift; sourceTree = "<group>"; };
 		4B8BEF70209E245500E2117E /* AddObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObjectViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B6EF197209EEB930082DECB /* CustomArrayControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B6EF198209EEBB60082DECB /* SelectionBindingArrayController.swift */,
+			);
+			path = CustomArrayControllers;
+			sourceTree = "<group>";
+		};
 		4B8BEF67209E178600E2117E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		4B98687D209A48B100A62C9F /* GalleryApp */ = {
 			isa = PBXGroup;
 			children = (
+				4B6EF197209EEB930082DECB /* CustomArrayControllers */,
 				4B8BEF6D209E184100E2117E /* Entities */,
 				4B8BEF6B209E17F500E2117E /* Views */,
 				4B8BEF6A209E17D700E2117E /* WindowControllers */,
@@ -402,6 +413,7 @@
 				4B986AB9209B43A500A62C9F /* AlbumListViewController.swift in Sources */,
 				4B6C9DF1209CD7D300864CE1 /* ImageTableCellView.swift in Sources */,
 				4B8BEF6F209E242A00E2117E /* AddObjectPersonWindowController.swift in Sources */,
+				4B6EF199209EEBB60082DECB /* SelectionBindingArrayController.swift in Sources */,
 				4BDC92DC209C480200699320 /* PeopleViewController.swift in Sources */,
 				4BDC9306209C669D00699320 /* ListCountValueTransformer.swift in Sources */,
 				4B986884209A48B100A62C9F /* GalleryApp.xcdatamodeld in Sources */,

@@ -15,7 +15,7 @@
         <relationship name="position" maxCount="1" deletionRule="Cascade" destinationEntity="PositionEntity" inverseName="item" inverseEntity="PositionEntity" syncable="YES"/>
     </entity>
     <entity name="ObjectEntity" representedClassName=".ObjectEntity" isAbstract="YES" syncable="YES">
-        <attribute name="desc" optional="YES" attributeType="String" defaultValueString="Descritpion" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" defaultValueString="Description" syncable="YES"/>
         <attribute name="name" attributeType="String" defaultValueString="Name" syncable="YES"/>
     </entity>
     <entity name="PersonEntity" representedClassName=".PersonEntity" parentEntity="ObjectEntity" syncable="YES">
