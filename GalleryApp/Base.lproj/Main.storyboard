@@ -684,7 +684,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="GalleryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Albums" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -754,7 +754,11 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="z9C-im-dIn" name="value" keyPath="selection.title" id="uRz-F3-vrg"/>
+                                                <binding destination="z9C-im-dIn" name="value" keyPath="selection.title" id="4v0-BF-fsg">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">DefaultTitleValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cuh-lV-cyA">
@@ -1211,6 +1215,7 @@ IA
                                                         <connections>
                                                             <action trigger="doubleAction" selector="AddPhotoToAlbum_DoubleClick:" target="GHi-34-qBR" id="Vtt-nB-AsQ"/>
                                                             <binding destination="W4g-Mb-zi1" name="content" keyPath="arrangedObjects" id="4LV-dm-UPW"/>
+                                                            <binding destination="W4g-Mb-zi1" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="4LV-dm-UPW" id="YC2-nf-SKd"/>
                                                         </connections>
                                                     </tableView>
                                                 </subviews>
@@ -1485,7 +1490,11 @@ IA
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="BUB-4z-2cK" name="value" keyPath="selection.name" id="mC0-9f-Bhr"/>
+                                                <binding destination="BUB-4z-2cK" name="value" keyPath="selection.name" id="tpn-n4-M26">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">DefaultNameValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qKf-q4-bgl">
@@ -1732,7 +1741,7 @@ IA
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
-                                                            <action selector="Photos_OnDoubleClick:" target="E13-2b-7uu" id="zzu-64-NlP"/>
+                                                            <action trigger="doubleAction" selector="Photos_OnDoubleClick:" target="E13-2b-7uu" id="xMJ-Z3-c3E"/>
                                                             <binding destination="7IB-SF-a0W" name="content" keyPath="arrangedObjects" id="EXF-hx-YPx"/>
                                                             <binding destination="7IB-SF-a0W" name="selectionIndexes" keyPath="self.selectionIndexes" previousBinding="EXF-hx-YPx" id="wHd-fB-u9y"/>
                                                         </connections>
@@ -1838,7 +1847,11 @@ IA
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="IK5-vh-MgP" name="value" keyPath="selection.name" id="tZH-Vg-irI"/>
+                                                <binding destination="IK5-vh-MgP" name="value" keyPath="selection.name" id="Dnc-QN-373">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">DefaultNameValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wu5-Dd-Zyn">
@@ -3021,7 +3034,11 @@ IA
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="4al-O2-4su" name="value" keyPath="selection.title" id="YAP-Az-bab"/>
+                                                <binding destination="4al-O2-4su" name="value" keyPath="selection.title" id="qsl-6I-Q1T">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">DefaultTitleValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Q5-hF-r6a">

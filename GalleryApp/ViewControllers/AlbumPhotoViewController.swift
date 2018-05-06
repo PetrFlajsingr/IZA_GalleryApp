@@ -41,8 +41,6 @@ class AlbumPhotoViewController: NSViewController {
         
         let predicate = NSPredicate(format: "SUBQUERY(albums, $album, $album = %@).@count <> 0", objectID!)
         PhotoArrayController.fetchPredicate = predicate
-        
-        view.window?.title = "Album: " + (selectedAlbum?.title)!
     }
     
     @objc func reloadArrayController(){

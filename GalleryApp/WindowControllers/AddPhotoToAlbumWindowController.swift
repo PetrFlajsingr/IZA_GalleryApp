@@ -18,7 +18,7 @@ class AddPhotoToAlbumWindowController: NSWindowController {
     func setAlbum(albumEntity: AlbumEntity){
         selectedAlbum = albumEntity
         
-        self.window?.title = "Album: " + (selectedPhoto?.title)!
+        self.window?.title = "Add photos to album: " + (selectedAlbum?.title)!
     }
     
     func getAlbum() -> AlbumEntity{

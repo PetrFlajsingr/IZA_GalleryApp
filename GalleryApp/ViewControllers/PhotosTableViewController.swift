@@ -25,7 +25,11 @@ class PhotosTableViewController: NSViewController {
     /*
      Creates and shows window containing photo detail
      */
-    @IBAction func PhotoTable_OnDoubleClick(_ sender: NSTableView) {       
+    @IBAction func PhotoTable_OnDoubleClick(_ sender: NSTableView) {
+        if(PhotoArrayController.selectedObjects.count == 0){
+            return
+        }
+        
         photoDetailWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PhotoDetailWindow")) as? PhotoDetailWindowController
         
         photoDetailWindow?.setPhoto(photoEntity: (PhotoArrayController.selectedObjects[0] as? PhotoEntity)!)
@@ -51,7 +55,7 @@ class PhotosTableViewController: NSViewController {
             if (result != nil) {
                 let path = result!.path
                 
-                let filename = (path as NSString).lastPathComponent
+                let filename = result?.deletingPathExtension().lastPathComponent
                 let pathExtention = result?.pathExtension
                 
                 let photo = NSEntityDescription.insertNewObject(forEntityName: "PhotoEntity", into: MOC) as! PhotoEntity

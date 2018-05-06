@@ -37,8 +37,6 @@ class PhotoDetailViewController: NSViewController {
         setPredicateForPeopleArrayController(photoID: objectID!)
         
         setPredicateForObjectArrayController(photoID: objectID!)
-        
-        view.window?.title = "Photo: " + (selectedPhoto?.title)!
     }
     
     // spinavy hack, ale bohužel jsem nenašel jiný způsob jak zabránit změně selection při úpravě jeho property...

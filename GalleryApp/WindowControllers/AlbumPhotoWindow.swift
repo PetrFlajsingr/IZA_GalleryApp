@@ -19,7 +19,7 @@ class AlbumPhotoWindow: NSWindowController {
     func setAlbum(albumEntity: AlbumEntity){
         selectedAlbum = albumEntity
         
-        self.window?.title = "Album: " + (selectedPhoto?.title)!
+        self.window?.title = "Album: " + (selectedAlbum?.title)!
     }
 
     func getAlbum() -> AlbumEntity{

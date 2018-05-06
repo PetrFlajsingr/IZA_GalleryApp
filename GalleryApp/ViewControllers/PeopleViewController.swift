@@ -25,6 +25,9 @@ class PeopleViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
+        if(PeopleArrayController.selectedObjects.count == 0){
+            return
+        }
         
         let selectedPerson = PeopleArrayController.selectedObjects[0] as! PersonEntity
         
@@ -33,7 +36,11 @@ class PeopleViewController: NSViewController {
         setPredicateForPhotosArrayController(personID: objectID)
     }
     
-    @IBAction func People_OnSelectionChanged(_ sender: NSTableView) {        
+    @IBAction func People_OnSelectionChanged(_ sender: NSTableView) {
+        if(PeopleArrayController.selectedObjects.count == 0){
+            return
+        }
+        
         let selectedPerson = PeopleArrayController.selectedObjects[0] as! PersonEntity
         
         let objectID = selectedPerson.objectID
@@ -53,6 +60,10 @@ class PeopleViewController: NSViewController {
      Creates and shows window containing photo detail
      */
     @IBAction func Photos_OnDoubleClick(_ sender: NSTableView) {
+        if(PhotosArrayController.selectedObjects.count == 0){
+            return
+        }
+        
         photoDetailWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "PhotoDetailWindow")) as? PhotoDetailWindowController
         
         photoDetailWindow?.setPhoto(photoEntity: (PhotosArrayController.selectedObjects[0] as? PhotoEntity)!)

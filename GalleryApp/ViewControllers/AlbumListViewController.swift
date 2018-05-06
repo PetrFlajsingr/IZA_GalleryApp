@@ -31,6 +31,10 @@ class AlbumListViewController: NSViewController {
      Creates and shows window containing all photos in album
      */
     @IBAction func AlbumTable_OnDoubleClick(_ sender: NSTableView) {
+        if(AlbumListArrayController.selectedObjects.count == 0){
+            return
+        }
+        
         albumPhotoWindow = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "AlbumPhotoWindow")) as? AlbumPhotoWindow
         
         albumPhotoWindow?.setAlbum(albumEntity: (AlbumListArrayController.selectedObjects[0] as? AlbumEntity)!);
