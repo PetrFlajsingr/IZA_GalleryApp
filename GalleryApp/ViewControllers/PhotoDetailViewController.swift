@@ -138,8 +138,10 @@ class PhotoDetailViewController: NSViewController {
                 return
             }
             
-            object.removeFromPhotoRecords(recordToRemove!)
-            selectedPhoto?.removeFromItemsOnPhoto(recordToRemove!)
+            MOC.delete(recordToRemove!)
+            
+            //object.removeFromPhotoRecords(recordToRemove!)
+            //selectedPhoto?.removeFromItemsOnPhoto(recordToRemove!)
         }else if(PeopleTable.isAccessibilityFocused()){
             let person = PeopleArrayController.selectedObjects[0] as! PersonEntity
             
@@ -156,9 +158,10 @@ class PhotoDetailViewController: NSViewController {
             if(recordToRemove == nil){
                 return
             }
+            MOC.delete(recordToRemove!)
             
-            person.removeFromPhotoRecords(recordToRemove!)
-            selectedPhoto?.removeFromPersonsOnPhoto(recordToRemove!)
+            //person.removeFromPhotoRecords(recordToRemove!)
+            //selectedPhoto?.removeFromPersonsOnPhoto(recordToRemove!)
         }
     }
     
