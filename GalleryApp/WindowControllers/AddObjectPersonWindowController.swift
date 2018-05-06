@@ -12,14 +12,14 @@ class AddObjectPersonWindowController: NSWindowController {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-    
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
 
     private var selectedPhoto: PhotoEntity?
     
     func setPhoto(photoEntity: PhotoEntity){
         selectedPhoto = photoEntity
+        
+        self.window?.title = "Add objects to photo: " + (selectedPhoto?.title)!
     }
     
     func getPhoto() -> PhotoEntity{

@@ -12,8 +12,8 @@ class ImageDataDetailValueTransformer: ValueTransformer {
     static let sizeLimit : NSSize = {
         var size = NSSize()
         
-        size.width = 490
-        size.height = 460
+        size.width = 350
+        size.height = 350
         
         return size
     }()
